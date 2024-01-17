@@ -56,3 +56,15 @@ header{
 #contact:hover{
     background-color: rgba(0,136,169,0.6);
 }
+
+#hamburger_nav{
+    position: fixed;
+    top: 25px;
+    left: 20px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    color: #fff;
+    background-color: #041d35;
+    padding: 15px;
+}
