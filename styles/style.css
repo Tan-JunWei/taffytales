@@ -5,11 +5,10 @@
     background-color: rgb(34, 30, 38);
 }
 
-.logo{
+#logo{
     height:70px;
     border-radius: 50%;
 }
-
 
 li, a, button{
     font-family: sans-serif;
@@ -26,31 +25,26 @@ header{
     padding: 20px;
 }
 
-.logo{
-    cursor: pointer;
-}
-
-.nav__links{
+#nav__links{
     list-style: none;
 }
 
-.nav__links li{
+#nav__links li{
     display: inline-block;
     padding: 0px 30px;
 }
 
-.nav__links li a{
-    transition: all 0.3s ease 0s;
+#nav__links li a{
+    transition: color 0.3s ease 0s;
 }
 
-.nav__links li a:hover{
+#nav__links li a:hover{
     color: #e7a2f7;
-    font-size: 21px;
     font-weight: 200;
     font-style: italic;
 }
 
-button{
+#contact{
     padding: 10px 30px;
     background-color: rgba(0,136,169,1);
     border: none;
@@ -59,7 +53,6 @@ button{
     transition: all 0.3s ease 0s;
 }
 
-button:hover{
+#contact:hover{
     background-color: rgba(0,136,169,0.6);
-    font-size: 15px;
 }
