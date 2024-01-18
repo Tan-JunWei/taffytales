@@ -96,7 +96,7 @@ li, a, button{
     scroll-snap-type: x mandatory;
     scroll-behavior: smooth;
     box-shadow: 0 1.5rem 3rem -0.75rem hsla(0, 0%, 0%, 0.25);
-    border-radius: 0.9rem;
+    border-radius: 2.7rem;
 }
 
 .slider img{
@@ -126,5 +126,4 @@ li, a, button{
 
 .slider-nav a:hover{
     opacity:1;
-
 }
