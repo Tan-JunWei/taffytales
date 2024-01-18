@@ -18,27 +18,34 @@ li, a, button{
     text-decoration: none;
 }
 
-header{
+.horibar{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px;
+    padding: 25px;
 }
 
-#nav__links{
+.nav__links{
     list-style: none;
+    transform: translateY(-1000%);
+    transition: transform 0.2s;
+    z-index: 99;
 }
 
-#nav__links li{
+.showMenu{
+    transform: translateY(0)
+}
+
+.nav__links li{
     display: inline-block;
-    padding: 0px 30px;
+    padding: 0px 20px;
 }
 
-#nav__links li a{
+.nav__links li a{
     transition: color 0.3s ease 0s;
 }
 
-#nav__links li a:hover{
+.nav__links li a:hover{
     color: #e7a2f7;
     font-weight: 200;
     font-style: italic;
@@ -54,17 +61,21 @@ header{
 }
 
 #contact:hover{
-    background-color: rgba(0,136,169,0.6);
+    background-color: rgba(0,136,169,0.5);
 }
 
-#hamburger_nav{
+.hamburger {
     position: fixed;
-    top: 25px;
-    left: 20px;
-    border: none;
-    outline: none;
+    z-index: 100;
+    top: 1rem;
+    left: 1rem;
+    padding: 10px;
+    border: black solid 1px;
+    background: rgb(34, 30, 38);
     cursor: pointer;
-    color: #fff;
-    background-color: #041d35;
-    padding: 15px;
+    border-radius:20%;
 }
+
+.closeIcon {
+    display: none;
+  }
