@@ -7,8 +7,8 @@
 
 /* nav bar */
 #logo{
-    height:70px;
-    border-radius: 50%;
+    height:90px;
+    border-radius: 10%;
 }
 
 li, a, button{
@@ -68,8 +68,8 @@ li, a, button{
 .hamburger {
     position: fixed;
     z-index: 100;
-    top: 1rem;
-    left: 100px;
+    top: 50px;
+    left: 225px;
     padding: 10px;
     border: black solid 1px;
     background: rgb(34, 30, 38);
@@ -126,4 +126,5 @@ li, a, button{
 
 .slider-nav a:hover{
     opacity:1;
+
 }
