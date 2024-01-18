@@ -29,3 +29,20 @@ navItems.forEach(
     navItems.addEventListener("click", toggleMenu);
   }
 )
+
+document.addEventListener('DOMContentLoaded', function () {
+  const slider = document.querySelector('.slider');
+  const scrollWidth = slider.scrollWidth / slider.children.length;
+  let currentIndex = 0;
+
+  function scrollNext() {
+    currentIndex = (currentIndex + 1) % slider.children.length;
+    slider.scrollLeft = currentIndex * scrollWidth;
+  }
+
+  function autoScroll() {
+    setInterval(scrollNext, 6000); // Change image every 6 seconds
+  }
+
+  autoScroll();
+});

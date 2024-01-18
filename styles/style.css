@@ -5,6 +5,7 @@
     background-color: rgb(34, 30, 38);
 }
 
+/* nav bar */
 #logo{
     height:70px;
     border-radius: 50%;
@@ -79,6 +80,8 @@ li, a, button{
 .closeIcon {
     display: none;
 }
+
+/* Image Slider */
 
 .slider-wrapper{
     position:relative;
