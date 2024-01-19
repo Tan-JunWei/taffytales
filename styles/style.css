@@ -66,7 +66,7 @@ li, a, button{
 }
 
 .hamburger {
-    position: fixed;
+    position:fixed;
     z-index: 100;
     top: 50px;
     left: 225px;
@@ -80,6 +80,56 @@ li, a, button{
 .closeIcon {
     display: none;
 }
+
+p{
+    font-size: 50px;
+}
+
+/*scroll reveal Intro*/
+.scroll-reveal h2{
+    margin-top: 150px;
+    font-size:4.3rem;
+    line-height: 1;
+    text-align: center;
+    font-family: 'Emilys Candy', serif;
+}
+
+.scroll-reveal p{
+    margin-top: 30px;
+    font-size: 1.9rem;
+    line-height:1.3;
+    max-width: 50em;
+    margin-inline: auto;
+    text-align: center;
+    font-family: 'Lemon', serif;
+}
+
+.scroll-reveal span {
+    color: hsla(309, 84%, 87%, 0.3);
+    background-clip: text;
+    background-repeat: no-repeat;
+    background-size: 0% 100%;
+    background-image: linear-gradient(90deg,rgb(64, 174, 188),rgb(208, 206, 142));
+    animation: scroll-reveal linear forwards;
+    animation-timeline: view();
+}
+
+.scroll-reveal h2 span{
+  animation-range-start:cover 30vh;
+  animation-range-end:cover 60vh;
+}
+
+.scroll-reveal p span{
+  animation-range-start:cover 48.7vh;
+  animation-range-end:cover 80vh;
+}
+
+@keyframes scroll-reveal{
+    to{
+      background-size: 100% 100%;
+    }
+}
+
 
 /* Image Slider */
 .container h1{
