@@ -39,7 +39,7 @@ li, a, button{
 
 .nav__links li{
     display: inline-block;
-    padding: 0px 20px;
+    padding: 0px 25px;
 }
 
 .nav__links li a{
@@ -82,10 +82,21 @@ li, a, button{
 }
 
 /* Image Slider */
+.container h1{
+    font-size:35px;
+    font-family: "Sofia";
+    text-align: center;
+    color: #f5d0fd;
+}
+
+.container h1 .material-symbols-outlined{
+    font-size: 39px;
+    color: #8f509e;
+}
 
 .slider-wrapper{
     position:relative;
-    max-width:58rem;
+    max-width:70rem;
     margin:0 auto;
 }
 

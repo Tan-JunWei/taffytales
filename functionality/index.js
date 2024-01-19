@@ -1,3 +1,4 @@
+//hamburger menu
 const navLinks = document.querySelector(".nav__links");
 const navItems = document.querySelectorAll(".navItems");
 const hamburger= document.querySelector(".hamburger");
@@ -30,6 +31,7 @@ navItems.forEach(
   }
 )
 
+//image slider autoscroll effect
 document.addEventListener('DOMContentLoaded', function () {
   const slider = document.querySelector('.slider');
   const scrollWidth = slider.scrollWidth / slider.children.length;
