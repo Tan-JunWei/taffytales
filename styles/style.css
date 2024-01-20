@@ -189,6 +189,8 @@ p{
     }
 }
 
+/*call to action*/
+
 #buyNow{
     margin-top: 12px;
     margin-left:17.5%;
@@ -198,7 +200,7 @@ p{
     border-radius: 10px;
     cursor: pointer;
     transition: all 0.3s ease 0s;
-    color: #efb94c;
+    color: #83ff8d;
     font-family: 'Noticia Text', serif;
 }
 
@@ -211,6 +213,48 @@ p{
     border-radius: 20px;
 }
 
+/*bestsellers grid*/
+
+#fudge {
+    margin-top: 170px;
+    display: flex;
+    flex-direction: row;
+    align-items: center; /* Center items vertically */
+    margin-bottom:1.5rem;
+}
+
+#best-1-parent{
+    overflow: hidden;
+    position: relative;
+    width: 50rem;
+    height: 50rem;
+    margin-right: 40px;
+}
+
+#best-1 {
+    width: 100%;
+    max-width: 100%; 
+    margin-right: 10px;
+    margin-left: 10rem;
+    transition: transform 0.3s ease-in-out;
+}
+
+#best-1:hover {
+    cursor: pointer;
+    transform: scale(1.2); /* Zoom in on hover */
+}
+
+#text-1 h3{
+    font-family: 'Amita', serif ;
+    font-size: 45px;
+    color:#d3fcc8;
+}
+#text-1 p{
+    font-family: 'Texturina', serif;
+    font-size: 20px;
+    color: #e8d5c5;
+}
+
 #bestsellers{
     display: grid;
     gap: 1.5rem;
@@ -218,14 +262,10 @@ p{
     grid-template-rows: 2;
 }
 
-#fudge{
-    margin-top: 170px;
-    grid-column: span 3;
-}
-
 #bestsellers img{
     max-width: 100%;
 }
+
 
 #bestsellers h3{
     color:#d3fcc8;
