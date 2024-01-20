@@ -210,3 +210,24 @@ p{
     color: #fff6dd;
     border-radius: 20px;
 }
+
+#bestsellers{
+    display: grid;
+    gap: 1.5rem;
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows: 2;
+}
+
+#fudge{
+    margin-top: 170px;
+    grid-column: span 3;
+}
+
+#bestsellers img{
+    max-width: 100%;
+}
+
+#bestsellers h3{
+    color:#d3fcc8;
+    font-family: 'Amita', serif;
+}
