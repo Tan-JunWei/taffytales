@@ -146,7 +146,7 @@ p{
 
 /*scroll reveal Intro*/
 .scroll-reveal h2{
-    margin-top: 150px;
+    margin-top: 190px;
     font-size:4.3rem;
     line-height: 1;
     text-align: center;
@@ -213,10 +213,23 @@ p{
     border-radius: 20px;
 }
 
-/*bestsellers grid*/
+/*bestsellers flexbox & grid*/
+
+#bestsellers-header{
+    margin-top: 210px;
+    font-size:35px;
+    font-family: "Sofia";
+    text-align: center;
+    color: #f5d0fd;
+}
+
+h2 .material-symbols-outlined{
+    font-size: 39px;
+    color: #8f509e; 
+}
 
 #fudge {
-    margin-top: 170px;
+    margin-top: 40px;
     display: flex;
     flex-direction: row;
     align-items: center; /* Center items vertically */
@@ -257,7 +270,7 @@ p{
 
 #bestsellers{
     display: grid;
-    gap: 1.5rem;
+    gap: 2rem;
     grid-template-columns: repeat(3,1fr);
     grid-template-rows: 2;
 }
@@ -270,4 +283,35 @@ p{
 #bestsellers h3{
     color:#d3fcc8;
     font-family: 'Amita', serif;
+}
+
+#bestsellers img {  /*same size*/
+    height: 35rem; /* Set desired height */
+    width: 29rem;  /* Set desired width */
+    object-fit: cover; /* ensures that the image maintains its aspect ratio while covering the specified dimensions */
+}
+
+.hidden{
+    opacity: 0;
+    filter: blur(5px);
+    transform: translateX(-100%);
+    transition: all 1s;
+}
+
+.show{
+    opacity:1;
+    filter: blur(0);
+    transform: translateX(0);
+}
+
+#drops{
+    transition-delay:200ms;
+}
+
+#whisper{
+    transition-delay: 500ms;
+}
+
+#buttons{
+    transition-delay: 900ms;
 }
