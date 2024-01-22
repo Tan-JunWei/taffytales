@@ -319,16 +319,46 @@ h2 .material-symbols-outlined{
 
 /*call to action 2*/
 
-#browseMore{
-    margin-top: 12px;
-    margin-left:17.5%;
+.btn{
+    top:25px;
+    margin-left: 43%;
     padding: 12px 20px;
-    min-width: 190px;
+    min-width: 180px;
     cursor: pointer;
     background:none;
     border: 2px solid #40dbc7;
-    font-family: 'Noticia Text', serif;
+    font-family: 'Arial', serif;
+    position: relative;
+    overflow: hidden;
+    display: inline-block;
 }
-#browseMore:hover{
-    color:#ffd392;
+
+.btn span{
+    position: relative;
+    z-index: 1;
+    background: none;
+}
+
+.btn::before{
+    content:'';
+    position: absolute;
+    top:var(--y);
+    left:var(--x);
+    transform: translate(-50%,-50%) ;
+    width:0.5rem;
+    height:0.5rem;
+    border-radius: 50%;
+    background: #ffd99f;
+    transition: width 0.5s, height 0.5s;
+}
+
+.btn:hover::before{
+    width:180px;
+    height: 220px;
+}
+
+.btn:hover{
+    color: #8026b0;
+    font-style: oblique;
+    font-weight: 700;
 }
