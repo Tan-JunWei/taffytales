@@ -2,10 +2,10 @@
     box-sizing: border-box;
     margin:0;
     padding:0;
-    background-color: rgb(34, 30, 38);
+    background-color: rgb(34 30 38);
 }
 
-/* nav bar */
+/* nav bar*/
 #logo{
     height:90px;
     border-radius: 10%;
@@ -319,9 +319,10 @@ h2 .material-symbols-outlined{
 
 /*call to action 2*/
 
-.btn{
+.cta-container .btn{
     top:25px;
     margin-left: 43%;
+    margin-bottom: 25px;
     padding: 12px 20px;
     min-width: 180px;
     cursor: pointer;
@@ -333,13 +334,13 @@ h2 .material-symbols-outlined{
     display: inline-block;
 }
 
-.btn span{
+.cta-container .btn span{
     position: relative;
     z-index: 1;
     background: none;
 }
 
-.btn::before{
+.cta-container .btn::before{
     content:'';
     position: absolute;
     top:var(--y);
@@ -352,13 +353,95 @@ h2 .material-symbols-outlined{
     transition: width 0.5s, height 0.5s;
 }
 
-.btn:hover::before{
+.cta-container .btn:hover::before{
     width:180px;
     height: 220px;
 }
 
-.btn:hover{
+.cta-container .btn:hover{
     color: #8026b0;
     font-style: oblique;
     font-weight: 700;
+}
+
+/* footer */
+.row{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+ul{
+    list-style: none;
+}
+
+.footer-col li{
+    font-family: "Sofia"; /*not working*/
+}
+
+.footer{
+    margin-top: 18rem;
+    background-color: #333267; /*not working*/
+    line-height: 1.5;
+}
+
+.footer-col{
+    width: 33%;
+    padding: 0 15px;
+}
+
+.footer-col h4{
+    font-size: 20px;
+    color: #ffffff;
+    text-transform: capitalize;
+    margin-bottom: 36px;
+    font-weight: 500;
+    font-family: "Amita";
+    position: relative;
+}
+
+.footer-col h4::before{
+    content: '';
+    position: absolute;
+    left:0;
+    bottom:-10px;
+    background-color: #e91e63;
+    height:2px;
+    box-sizing: border-box;
+    width: 50px;
+}
+
+.footer-col ul li{
+    margin-bottom: 10px;
+}
+
+.footer-col ul li a{
+    font-size: 16px;
+    text-transform:capitalize;
+    color:rgba(180,229,235,0.5);
+    font-weight:300;
+    display:block;
+    transition:all 0.3s ease;
+}
+
+.footer-col ul li a:hover{
+    padding-left: 8px;
+    color: rgba(180, 229, 235,1);
+}
+
+.footer-col .social-media a{
+    display:inline-block;
+    height: 40px;
+    width:40px;
+    background-color: rgba(255,255,255,0.2);
+    margin-right:10px;
+    text-align: center;
+    line-height: 40px;
+    border-radius: 50%;
+    color:#ffffff;
+    transition: all 0.5s ease;
+}
+
+.footer-col .social-media a:hover{
+    color:#24262b;
+    background-color: #ffffff;  /*not working: bg color(black) is included */
 }
