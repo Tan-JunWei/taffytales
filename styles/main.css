@@ -375,12 +375,11 @@ ul{
 }
 
 .footer-col li{
-    font-family: "Sofia"; /*not working*/
+    font-family: "Sofia";
 }
 
 .footer{
     margin-top: 18rem;
-    background-color: #333267; /*not working*/
     line-height: 1.5;
 }
 
@@ -443,5 +442,9 @@ ul{
 
 .footer-col .social-media a:hover{
     color:#24262b;
-    background-color: #ffffff;  /*not working: bg color(black) is included */
+    background-color: #ffffff;
+}
+
+.footer-col .social-media a .fab {
+    background-color: transparent;
 }
