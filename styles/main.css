@@ -2,7 +2,7 @@
     box-sizing: border-box;
     margin:0;
     padding:0;
-    background-color: rgb(34 30 38);
+    background-color: var(--dark-purple);
 }
 
 /* nav bar*/
@@ -91,12 +91,12 @@ p{
     font-size:35px;
     font-family: "Sofia";
     text-align: center;
-    color: #f5d0fd;
+    color: var(--light-pink);
 }
 
 .container h1 .material-symbols-outlined{
     font-size: 39px;
-    color: #8f509e;
+    color: var(--hollow-purple);
 }
 
 .slider-wrapper{
@@ -168,7 +168,7 @@ p{
     background-clip: text;
     background-repeat: no-repeat;
     background-size: 0% 100%;
-    background-image: linear-gradient(90deg,rgb(64, 174, 188),rgb(208, 206, 142));
+    background-image: linear-gradient(90deg,var(--sweet-blue),var(--cornfield-yellow));
     animation: scroll-reveal linear forwards;
     animation-timeline: view();
 }
@@ -221,7 +221,7 @@ p{
     font-size:35px;
     font-family: "Sofia";
     text-align: center;
-    color: #f5d0fd;
+    color: var(--light-pink);
 }
 
 h2 .material-symbols-outlined{
@@ -266,7 +266,7 @@ h2 .material-symbols-outlined{
 #text-1 p{
     font-family: 'Texturina', serif;
     font-size: 20px;
-    color: #e8d5c5;
+    color: var(--zesty-orange);
 }
 
 #bestsellers{
@@ -359,7 +359,7 @@ h2 .material-symbols-outlined{
 }
 
 .cta-container .btn:hover{
-    color: #8026b0;
+    color: var(--hollow-purple);
     font-style: oblique;
     font-weight: 700;
 }
@@ -424,7 +424,7 @@ ul{
 
 .footer-col ul li a:hover{
     padding-left: 8px;
-    color: rgba(180, 229, 235,1);
+    color: var(--orion-blue);
 }
 
 .footer-col .social-media a{
