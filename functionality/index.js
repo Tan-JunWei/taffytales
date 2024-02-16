@@ -65,7 +65,7 @@ const observer = new IntersectionObserver((entries)=>{
 const hiddenElements = document.querySelectorAll('.hidden');
 hiddenElements.forEach((el)=> observer.observe(el));
 
-//button script
+//ripple button script
 
 const btn = document.querySelector('.btn');
 btn.onmousemove = function(e){
@@ -75,3 +75,4 @@ btn.onmousemove = function(e){
   btn.style.setProperty('--x', x + 'px');
   btn.style.setProperty('--y', y + 'px');
 }
+

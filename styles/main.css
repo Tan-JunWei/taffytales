@@ -33,13 +33,17 @@ li, a, button{
     z-index: 99;
 }
 
+.navItems{
+    font-size: 20px;
+}
+
 .showMenu{
     transform: translateY(0)
 }
 
 .nav__links li{
     display: inline-block;
-    padding: 0px 25px;
+    padding: 0px 45px;
 }
 
 .nav__links li a{
@@ -68,13 +72,17 @@ li, a, button{
 .hamburger {
     position:absolute;
     z-index: 100;
-    top: 50px;
-    left: 225px;
+    top: 28px;
+    left: 220px;
     padding: 10px;
     border: black solid 1px;
-    background: rgb(34, 30, 38);
+    background: rgb(60, 44, 78);
     cursor: pointer;
     border-radius:20%;
+}
+
+.material-icons{
+    background: transparent;
 }
 
 .closeIcon {
@@ -87,6 +95,11 @@ p{
 
 
 /* Image Slider */
+.container{
+    padding-top: 40px;
+}
+
+
 .container h1{
     font-size:35px;
     font-family: "Sofia";
@@ -129,6 +142,7 @@ p{
     left:50%;
     transform:translateX(-50%);
     z-index:1;
+    background: transparent;
 }
 
 .slider-nav a{
@@ -146,7 +160,7 @@ p{
 
 /*scroll reveal Intro*/
 .scroll-reveal h2{
-    margin-top: 190px;
+    margin-top: 250px;
     font-size:4.3rem;
     line-height: 1;
     text-align: center;
@@ -206,7 +220,7 @@ p{
 }
 
 #buyNow span{
-    background-color: rgba(85, 135, 97, 0.6);
+    background:transparent;
 }
 
 #buyNow:hover{
@@ -270,8 +284,10 @@ h2 .material-symbols-outlined{
 }
 
 #bestsellers{
+    margin-left: 3.5rem;
+    margin-top: 3rem;
     display: grid;
-    gap: 2rem;
+    gap: 1.7rem;
     grid-template-columns: repeat(3,1fr);
     grid-template-rows: 2;
 }
@@ -288,7 +304,7 @@ h2 .material-symbols-outlined{
 
 #bestsellers img {  /*same size*/
     height: 35rem; /* Set desired height */
-    width: 29rem;  /* Set desired width */
+    width: 30rem;  /* Set desired width */
     object-fit: cover; /* ensures that the image maintains its aspect ratio while covering the specified dimensions */
 }
 
@@ -332,6 +348,7 @@ h2 .material-symbols-outlined{
     position: relative;
     overflow: hidden;
     display: inline-block;
+    text-align: center;
 }
 
 .cta-container .btn span{
@@ -346,10 +363,10 @@ h2 .material-symbols-outlined{
     top:var(--y);
     left:var(--x);
     transform: translate(-50%,-50%) ;
-    width:0.5rem;
-    height:0.5rem;
+    width:0.9rem;
+    height:0.9rem;
     border-radius: 50%;
-    background: #ffd99f;
+    background: #fedfff;
     transition: width 0.5s, height 0.5s;
 }
 
@@ -388,14 +405,17 @@ ul{
     padding: 0 15px;
 }
 
-.footer-col h4{
-    font-size: 20px;
+.footer-col h4, .copyright h3{
     color: #ffffff;
     text-transform: capitalize;
-    margin-bottom: 36px;
     font-weight: 500;
     font-family: "Amita";
-    position: relative;
+}
+
+.footer-col h4{
+    font-size: 20px;
+    position:relative;
+    margin-bottom:36px;
 }
 
 .footer-col h4::before{
@@ -406,7 +426,7 @@ ul{
     background-color: #e91e63;
     height:2px;
     box-sizing: border-box;
-    width: 50px;
+    width: 85px;
 }
 
 .footer-col ul li{
@@ -414,27 +434,27 @@ ul{
 }
 
 .footer-col ul li a{
-    font-size: 16px;
+    font-size: 17px;
     text-transform:capitalize;
-    color:rgba(180,229,235,0.5);
+    color:rgba(213, 252, 241, 0.55);
     font-weight:300;
     display:block;
     transition:all 0.3s ease;
 }
 
 .footer-col ul li a:hover{
-    padding-left: 8px;
+    padding-left: 9px;
     color: var(--orion-blue);
 }
 
 .footer-col .social-media a{
     display:inline-block;
-    height: 40px;
-    width:40px;
-    background-color: rgba(255,255,255,0.2);
+    height: 50px;
+    width: 50px;
+    background-color: rgba(173, 244, 255, 0.3);
     margin-right:10px;
     text-align: center;
-    line-height: 40px;
+    line-height: 55px;
     border-radius: 50%;
     color:#ffffff;
     transition: all 0.5s ease;
@@ -447,4 +467,18 @@ ul{
 
 .footer-col .social-media a .fab {
     background-color: transparent;
+    font-size:22px;
+}
+
+/* company establish */
+.copyright{
+    margin-top: 4rem;
+    text-align: center;
+    font-size: 15px;
+    letter-spacing: 5px;
+}
+
+.copyright .material-symbols-outlined{
+    font-size:23px;
+    font-weight: 200;
 }
