@@ -1,0 +1,150 @@
+<!--navigation-->
+<header>
+    <!--Hamburger menu-->
+    <button class="hamburger">
+        <i class="hbgIcon material-icons">menu</i>
+        <i class="closeIcon material-icons">close</i>
+    </button>
+    
+    <!--Horizontal navigation bar-->
+    <div class="horibar">
+    <a href="../admin/main.html"><img id="logo" src="../assets/Logo.png" alt="logo"></a>
+    <nav>
+        <ul class="nav__links">
+            <li><a class ="navItems" href="../admin/confectionery.html">Our Products</a></li>
+            <li><a class ="navItems" href="../admin/admin.html">About</a></li>
+            <li><a class ="navItems" href="../admin/admin.html">Help</a></li>
+        </ul>
+    </nav>
+    <a href="#"><button id="contact">Contact</button></a>
+    </div>
+</header>
+
+<style>
+/* nav bar*/
+header{
+    background-color: var(--dark-purple);
+}
+
+#logo{
+    height:90px;
+    border-radius: 10%;
+}
+
+li, a, button{
+    font-family: sans-serif;
+    font-size: 18px;
+    font-weight: 500;
+    color: #d0f2f0;
+    text-decoration: none;
+}
+
+.horibar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 25px;
+}
+
+.nav__links{
+    list-style: none;
+    transform: translateY(-1000%);
+    transition: transform 0.2s;
+    z-index: 99;
+}
+
+.navItems{
+    font-size: 20px;
+}
+
+.showMenu{
+    transform: translateY(0)
+}
+
+.nav__links li{
+    display: inline-block;
+    padding: 0px 45px;
+}
+
+.nav__links li a{
+    transition: color 0.3s ease 0s;
+}
+
+.nav__links li a:hover{
+    color: #e7a2f7;
+    font-weight: 200;
+    font-style: italic;
+}
+
+#contact{
+    padding: 10px 30px;
+    background-color: rgba(0,136,169,1);
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease 0s;
+}
+
+#contact:hover{
+    background-color: rgba(0,136,169,0.5);
+}
+
+.hamburger {
+    position:absolute;
+    z-index: 100;
+    top: 28px;
+    left: 220px;
+    padding: 10px;
+    border: black solid 1px;
+    background: rgb(60, 44, 78);
+    cursor: pointer;
+    border-radius:20%;
+}
+
+.material-icons{
+    background: transparent;
+}
+
+.closeIcon {
+    display: none;
+}
+
+p{
+    font-size: 50px;
+}
+</style>
+
+<script>
+  //hamburger menu
+  const navLinks = document.querySelector(".nav__links");
+  const navItems = document.querySelectorAll(".navItems");
+  const hamburger= document.querySelector(".hamburger");
+  const closeIcon= document.querySelector(".closeIcon");
+  const hbgIcon = document.querySelector(".hbgIcon");
+
+  function toggleMenu() {
+  if (navLinks.classList.contains("showMenu")) {
+    //close menu
+    navLinks.classList.remove("showMenu");
+    closeIcon.style.display = "none";
+    hbgIcon.style.display = "block";
+  } 
+  else {
+    //open menu
+    navLinks.classList.add("showMenu");
+    closeIcon.style.display = "block";
+    hbgIcon.style.display = "none";
+    }
+  }
+
+  //button is hidden initially
+  closeIcon.style.display = "none";
+
+  hamburger.addEventListener("click", toggleMenu);
+
+  navItems.forEach( 
+    function(navItems) { 
+    navItems.addEventListener("click", toggleMenu);
+    }
+  )
+</script>

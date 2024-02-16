@@ -5,100 +5,10 @@
     background-color: var(--dark-purple);
 }
 
-/* nav bar*/
-#logo{
-    height:90px;
-    border-radius: 10%;
-}
-
-li, a, button{
-    font-family: sans-serif;
-    font-size: 18px;
-    font-weight: 500;
-    color: #d0f2f0;
-    text-decoration: none;
-}
-
-.horibar{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 25px;
-}
-
-.nav__links{
-    list-style: none;
-    transform: translateY(-1000%);
-    transition: transform 0.2s;
-    z-index: 99;
-}
-
-.navItems{
-    font-size: 20px;
-}
-
-.showMenu{
-    transform: translateY(0)
-}
-
-.nav__links li{
-    display: inline-block;
-    padding: 0px 45px;
-}
-
-.nav__links li a{
-    transition: color 0.3s ease 0s;
-}
-
-.nav__links li a:hover{
-    color: #e7a2f7;
-    font-weight: 200;
-    font-style: italic;
-}
-
-#contact{
-    padding: 10px 30px;
-    background-color: rgba(0,136,169,1);
-    border: none;
-    border-radius: 50px;
-    cursor: pointer;
-    transition: all 0.3s ease 0s;
-}
-
-#contact:hover{
-    background-color: rgba(0,136,169,0.5);
-}
-
-.hamburger {
-    position:absolute;
-    z-index: 100;
-    top: 28px;
-    left: 220px;
-    padding: 10px;
-    border: black solid 1px;
-    background: rgb(60, 44, 78);
-    cursor: pointer;
-    border-radius:20%;
-}
-
-.material-icons{
-    background: transparent;
-}
-
-.closeIcon {
-    display: none;
-}
-
-p{
-    font-size: 50px;
-}
-
-
 /* Image Slider */
 .container{
     padding-top: 40px;
 }
-
 
 .container h1{
     font-size:35px;
@@ -474,11 +384,21 @@ ul{
 .copyright{
     margin-top: 4rem;
     text-align: center;
-    font-size: 15px;
+    font-size: 14px;
     letter-spacing: 5px;
 }
 
 .copyright .material-symbols-outlined{
-    font-size:23px;
+    font-size:18px;
     font-weight: 200;
+}
+
+.credit-cards{
+    margin-top:0.5rem;
+    text-align: center;
+}
+
+.payment-options{
+    height:32px;
+    margin: 7px;
 }
