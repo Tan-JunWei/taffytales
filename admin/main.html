@@ -16,7 +16,7 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia">
     <script src="../functionality/index.js" defer></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="../functionality/w3schools.js" defer></script>
     <link href="https://fonts.googleapis.com/css2?family=Emilys+Candy&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Lemon&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Noticia+Text:ital@1&display=swap" rel="stylesheet">
@@ -24,12 +24,7 @@
 
 <body>
     <!--navigation-->
-    <div id="nav-placeholder"></div>
-    <script>
-      $.get("nav.html", function(data){
-        $("#nav-placeholder").replaceWith(data);
-      });
-    </script>
+    <div w3-include-html="nav.html"></div>
   
     <!--Image Slider-->
     <section class="container">
@@ -139,6 +134,10 @@
       <img class="payment-options" src="../assets/paypal.png"/>
       <img class="payment-options" src="../assets/visa.png"/>
     </div>
+  
+  <script>
+    includeHTML();
+  </script>
 
   </body>
 </html>
