@@ -6,8 +6,9 @@
     <title>Products Listing Page</title>
     <link rel="stylesheet" href="../styles/confectionery.css">
     <link rel="stylesheet" href="../styles/general.css">
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
-      rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Amita&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
     <script src="../functionality/index.js" defer></script>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Emilys+Candy&display=swap');
@@ -56,7 +57,7 @@
                                 <span><i class="fa-solid fa-star"></i></span>
                                 <span><i class="fa-solid fa-star"></i></span>
                                 <span><i class="fa-solid fa-star"></i></span>
-                                <span><i class="fa-regular fa-star"></i></span>
+                                <span><i class="fa-solid fa-star"></i></span>
                             </div>
                         </div>
                         <a href="#" class="product-name">FluffyCloud Bites,<br> new product</a>
@@ -167,7 +168,7 @@
                                 <span><i class="fa-solid fa-star"></i></span>
                                 <span><i class="fa-solid fa-star"></i></span>
                                 <span><i class="fa-solid fa-star"></i></span>
-                                <span><i class="fa-regular fa-star"></i></span>
+                                <span><i class="fa-solid fa-star"></i></span>
                             </div>
                         </div>
                         <a href="#" class="product-name">Minty Velvet Fudge</a>
@@ -231,7 +232,7 @@
                                 <span><i class="fa-solid fa-star"></i></span>
                                 <span><i class="fa-solid fa-star"></i></span>
                                 <span><i class="fa-solid fa-star"></i></span>
-                                <span><i class="fa-regular fa-star"></i></span>
+                                <span><i class="fa-solid fa-star"></i></span>
                             </div>
                         </div>
                         <a href="#" class="product-name">Blueberry Bliss Buttons</a>
@@ -275,7 +276,14 @@
         </div>
     </div>
 
-    <script>w3.includeHTML(navFunctionWrapper)</script>
+    <!--footer-->
+    <div w3-include-html="footer.html"></div>
+    <script>
+      w3.includeHTML(navFunctionWrapper);
+    </script>
     
+    <script>
+        w3.includeHTML();
+    </script>
 </body>
 </html>

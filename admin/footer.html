@@ -1,0 +1,165 @@
+<!--footer-->
+<div class="bottom">
+    <footer class="footer">
+      <div class="container">
+        <div class="row">
+          <div class="footer-col">
+            <h4>company</h4>
+            <ul>
+              <li><a href="#">about us</a></li>
+              <li><a href="#">our services</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h4>get help</h4>
+            <ul>
+              <li><a href="#">FAQ</a></li>
+              <li><a href="#">shipping</a></li>
+              <li><a href="#">payment options</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h4>follow us</h4>
+            <div class="social-media">
+              <a href="#"><i class="fab fa-instagram"></i></a>
+              <a href="#"><i class="fab fa-twitter"></i></a>
+              <a href="#"><i class="fab fa-facebook-f"></i></a>
+              <a href="#"><i class="fab fa-linkedin-in"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <div class="copyright">
+      <h3><span class="material-symbols-outlined">copyright</span> taffy tales 2024</h3>
+    </div>
+
+    <div class="credit-cards">
+      <img class="payment-options" src="../assets/amazon.png"/>
+      <img class="payment-options" src="../assets/american-express.png"/>
+      <img class="payment-options" src="../assets/mastercard.png"/>
+      <img class="payment-options" src="../assets/paypal.png"/>
+      <img class="payment-options" src="../assets/visa.png"/>
+    </div>
+  </div>
+
+  <style>
+    /* footer */
+    .bottom{
+        background: rgb(34 30 38);
+    }
+
+    .row{
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    ul{
+        list-style: none;
+    }
+
+    .footer-col li{
+        font-family: "Sofia";
+    }
+
+    .footer{
+        padding-top: 18rem;
+        line-height: 1.5;
+    }
+
+    .footer-col{
+        width: 33%;
+        padding: 0 15px;
+    }
+
+    .footer-col h4, .copyright h3{
+        color: #ffffff;
+        text-transform: capitalize;
+        font-weight: 500;
+        font-family: "Amita";
+    }
+
+    .footer-col h4{
+        font-size: 22px;
+        position:relative;
+        margin-bottom:38px;
+    }
+
+    .footer-col h4::before{
+        content: '';
+        position: absolute;
+        left:0;
+        bottom:-10px;
+        background-color: #e91e63;
+        height:2px;
+        box-sizing: border-box;
+        width: 85px;
+    }
+
+    .footer-col ul li{
+        margin-bottom: 10px;
+    }
+
+    .footer-col ul li a{
+        font-size: 18px;
+        text-transform:capitalize;
+        color:rgba(213, 252, 241, 0.55);
+        font-weight:300;
+        display:block;
+        transition:all 0.3s ease;
+        text-decoration: none;
+        font-family: "Amita","sans-serif";
+    }
+
+    .footer-col ul li a:hover{
+        padding-left: 9px;
+        color: var(--orion-blue);
+    }
+
+    .footer-col .social-media a{
+        display:inline-block;
+        height: 50px;
+        width: 50px;
+        background-color: rgba(173, 244, 255, 0.3);
+        margin-right:10px;
+        text-align: center;
+        line-height: 55px;
+        border-radius: 50%;
+        color:#ffffff;
+        transition: all 0.5s ease;
+    }
+
+    .footer-col .social-media a:hover{
+        color:#0f265e;
+        background-color: #ffffff;
+    }
+
+    .footer-col .social-media a .fab {
+        background-color: transparent;
+        font-size:22px;
+    }
+
+    /* company establish */
+    .copyright{
+        margin-top: 4rem;
+        text-align: center;
+        font-size: 14px;
+        letter-spacing: 5px;
+    }
+
+    .copyright .material-symbols-outlined{
+        font-size:18px;
+        font-weight: 200;
+    }
+
+    .credit-cards{
+        margin-top:0.5rem;
+        text-align: center;
+    }
+
+    .bottom .credit-cards .payment-options{
+        height:32px;
+        margin: 7px;
+    }
+  </style>
