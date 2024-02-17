@@ -89,7 +89,7 @@
 }
 
 .scroll-reveal span {
-    color: hsla(309, 84%, 87%, 0.3);
+    color: hsla(309, 84%, 87%, 0.35);
     background-clip: text;
     background-repeat: no-repeat;
     background-size: 0% 100%;
@@ -117,26 +117,31 @@
 /*call to action*/
 
 #buyNow{
-    margin-top: 12px;
-    margin-left:17.5%;
-    padding: 7px 15px;
-    background-color: rgba(85, 135, 97, 0.7);
+    margin-top: 15px;
+    margin-left:75%;
+    padding: 9px 20px;
+    background-image: linear-gradient(rgb(245, 63, 50),rgb(254, 157, 83));
     border: none;
     border-radius: 10px;
     cursor: pointer;
     transition: all 0.3s ease 0s;
-    color: #83ff8d;
+    color: #beffb8;
     font-family: 'Noticia Text', serif;
-    transition: 1s;
+    transition: all ease 0.5s;
+    font-size: 19px;
+    text-transform:uppercase;
 }
 
 #buyNow span{
     background:transparent;
+    font-size: 23px;
+    margin-right: 5px;
 }
 
 #buyNow:hover{
-    color: #fff6dd;
+    color: rgb(0, 0, 0);
     border-radius: 20px;
+    background-image: linear-gradient(rgb(198, 216, 255),rgb(219, 196, 255));
 }
 
 /*bestsellers flexbox & grid*/
@@ -165,16 +170,17 @@ h2 .material-symbols-outlined{
 #best-1-parent{
     overflow: hidden;
     position: relative;
-    width: 50rem;
-    height: 50rem;
+    margin-left: 10rem;
+    max-height: 46rem;
+    max-width: 35rem;
     margin-right: 40px;
 }
 
 #best-1 {
-    width: 100%;
-    max-width: 100%; 
+    width: 35rem;
+    height:46rem;
     margin-right: 10px;
-    margin-left: 10rem;
+    left: 10rem;
     transition: transform 0.3s ease-in-out;
 }
 
@@ -188,6 +194,7 @@ h2 .material-symbols-outlined{
     font-size: 45px;
     color:#d3fcc8;
 }
+
 #text-1 p{
     font-family: 'Texturina', serif;
     font-size: 20px;
@@ -206,7 +213,6 @@ h2 .material-symbols-outlined{
 #bestsellers img{
     max-width: 100%;
 }
-
 
 #bestsellers h3{
     color:#d3fcc8;
@@ -244,10 +250,63 @@ h2 .material-symbols-outlined{
     transition-delay: 900ms;
 }
 
+.card{
+    height: 560px;
+    max-width: 480px;
+    overflow:hidden;
+}
+
+.intro{
+    height:72px;
+    max-width: 480px;
+    padding-left: 6px;
+    box-sizing: border-box;
+    position: absolute;
+    bottom:0px;
+    background: rgb(27,27,27, .75);
+    color: var(--pale-pink);
+    text-align: center;
+    transition: all ease 0.4s;
+}
+
+.card .intro h3{
+    margin:10px;
+    font-size: 30px;
+    background: transparent;
+}
+
+.intro p{
+    font-size: 20px;
+    margin:5px;
+    visibility: hidden;
+    opacity: 0;
+    background: transparent;
+}
+
+.intro span{
+    font-weight: bolder;
+    background: transparent;
+}
+
+.card:hover{
+    cursor: pointer;
+}
+
+.card:hover .intro{
+    height:180px;
+    bottom: 0rem;
+    background: rgba(31, 9, 9, 0.85);
+}
+
+.card:hover p{
+    opacity: 1;
+    visibility: visible;
+}
+
 /*call to action 2*/
 
 .cta-container .btn{
-    top:25px;
+    top:40px;
     margin-left: 43%;
     margin-bottom: 25px;
     padding: 12px 20px;
@@ -311,7 +370,7 @@ ul{
 }
 
 .footer{
-    margin-top: 18rem;
+    margin-top: 10rem;
     line-height: 1.5;
 }
 
