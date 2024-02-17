@@ -16,8 +16,12 @@
         @import url('https://fonts.googleapis.com/css2?family=Quicksand&display=swap');
     </style>
     <script src="https://kit.fontawesome.com/b929ffe868.js" crossorigin="anonymous"></script>
+    <script src="https://www.w3schools.com/lib/w3.js"></script>
 </head>
 <body>
+    <!--navigation-->
+    <div w3-include-html="nav.html"></div>
+    <script src="../functionality/nav.js"></script>
 
     <div class="products">
         <div class="container">
@@ -270,6 +274,8 @@
             </div>
         </div>
     </div>
+
+    <script>w3.includeHTML(navFunctionWrapper)</script>
     
 </body>
 </html>

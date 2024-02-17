@@ -20,6 +20,7 @@
 .container h1 .material-symbols-outlined{
     font-size: 39px;
     color: var(--hollow-purple);
+    font-weight: 1000;
 }
 
 .slider-wrapper{
@@ -259,6 +260,10 @@ h2 .material-symbols-outlined{
     overflow: hidden;
     display: inline-block;
     text-align: center;
+    color: var(--sweet-blue);
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 530;
 }
 
 .cta-container .btn span{
@@ -276,7 +281,7 @@ h2 .material-symbols-outlined{
     width:0.9rem;
     height:0.9rem;
     border-radius: 50%;
-    background: #fedfff;
+    background: #fbefcf;
     transition: width 0.5s, height 0.5s;
 }
 
@@ -323,9 +328,9 @@ ul{
 }
 
 .footer-col h4{
-    font-size: 20px;
+    font-size: 22px;
     position:relative;
-    margin-bottom:36px;
+    margin-bottom:38px;
 }
 
 .footer-col h4::before{
@@ -344,12 +349,14 @@ ul{
 }
 
 .footer-col ul li a{
-    font-size: 17px;
+    font-size: 18px;
     text-transform:capitalize;
     color:rgba(213, 252, 241, 0.55);
     font-weight:300;
     display:block;
     transition:all 0.3s ease;
+    text-decoration: none;
+    font-family: "Amita","sans-serif";
 }
 
 .footer-col ul li a:hover{
@@ -371,7 +378,7 @@ ul{
 }
 
 .footer-col .social-media a:hover{
-    color:#24262b;
+    color:#0f265e;
     background-color: #ffffff;
 }
 

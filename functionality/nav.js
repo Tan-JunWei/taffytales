@@ -14,6 +14,7 @@ window.navFunctionWrapper = function () {
         closeIcon.style.display = "none";
         hbgIcon.style.display = "block";
     } 
+    
     else {
         //open menu
         navLinks.classList.add("showMenu");
