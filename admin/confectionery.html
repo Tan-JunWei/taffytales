@@ -275,6 +275,47 @@
             </div>
         </div>
     </div>
+    <button id="shopping-cart-btn" onclick="hideShowCart()"><span class="material-symbols-outlined">shopping_cart</span></button>
+
+    <!--cart layout-->
+    <div class="cart">
+        <div class="shopping-bag">
+            <span class="material-symbols-outlined">shopping_bag</span>
+            <h3>Cart</h3>
+            <div class="total-items-in-cart">0</div>
+        </div>
+
+        <div class="cart-header">
+            <div class="column1">Item</div>
+            <div class="column2">Unit price</div>
+            <div class="column3">Units</div>
+        </div>
+        <div class="cart-items">
+            <!-- render cart items here -->
+            <div class="cart-item">
+                <div class="item-info">
+                    <img src="../assets/marshmallowProduct.png" alt="Confectionery 1">
+                    <h4>FluffyCloud Bites</h4>
+                </div>
+                <div class="unit-price">
+                    <small>$</small>11.25
+                </div>
+                <div class="units">
+                    <div class="btn minus">-</div>
+                    <div class="number">1</div>
+                    <div class="btn plus">+</div>           
+                </div>
+            </div>
+        </div>
+        <div class="cart-footer">
+            <div class="subtotal">
+                Subtotal (0 items): $0
+            </div>
+            <div class="checkout">
+                Proceed to checkout
+            </div>
+        </div>
+    </div>
 
     <!--footer-->
     <div w3-include-html="footer.html"></div>

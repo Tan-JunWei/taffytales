@@ -33,6 +33,4 @@ window.navFunctionWrapper = function () {
         navItems.addEventListener("click", toggleMenu);
         }
     )
-    
-    console.log('test')
 }

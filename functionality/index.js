@@ -1,4 +1,3 @@
-
 //image slider autoscroll effect
 document.addEventListener('DOMContentLoaded', function () {
   const slider = document.querySelector('.slider');
@@ -44,3 +43,12 @@ btn.onmousemove = function(e){
   btn.style.setProperty('--y', y + 'px');
 }
 
+function hideShowCart() {  //doesnt work
+  const cart = document.querySelector('.cart');
+
+  // Toggle the 'showCart' class on the cart element
+  cart.classList.toggle(".showCart");
+
+  console.log(cart.classList); // Just for debugging
+  console.log(cart);
+}
