@@ -43,15 +43,3 @@ btn.onmousemove = function(e){
   btn.style.setProperty('--y', y + 'px');
 }
 
-function hideShowCart() {  
-  const cart = document.querySelector('.cart');
-  if (cart.classList.contains("showCart")){
-    cart.classList.remove("showCart"); //close cart
-  }
-
-  else {
-    cart.classList.add("showCart");
-  }
-  console.log(cart.classList); // Just for debugging
-  console.log(cart);
-}
