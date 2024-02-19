@@ -15,7 +15,7 @@
 
 body{
     font-family: "Quicksand", sans-serif;
-    
+    overflow-x: hidden;
 }
 
 /* utility stylings */
@@ -297,7 +297,7 @@ body{
 }
 
 .showCart{
-    transform: translateX(74%);               /*doesnt work */
+    left: 74% !important;
 }
 
 .cart{
@@ -305,7 +305,7 @@ body{
     width:25%;
     position:absolute;
     top:20%;
-    left:74%;
+    left:120%;
     transition: all ease 0.5s;
     background: #31ae8a;
     z-index: 100;
