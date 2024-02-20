@@ -6,7 +6,8 @@ const products = [
     instock: 7,
     description:
       "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores",
-    imgSrc:"C:\Users\Admin\Desktop\CS\website\FrontEndDev\Frontend-dev-project_1\assets\marshmallowProduct.png"
+    imgSrc:"../assets/marshmallowProduct.png",
+    imgid:"img1",
   },
   {
     id: 1,
@@ -15,7 +16,8 @@ const products = [
     instock: 7,
     description:
       "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores",
-    imgSrc: "C:\Users\Admin\Desktop\CS\website\FrontEndDev\Frontend-dev-project_1\assets\chocolateProduct.png",
+    imgSrc: "../assets/chocolateProduct.png",
+    imgid:"img2",
   },
   {
     id: 2,
@@ -24,7 +26,8 @@ const products = [
     instock: 4,
     description:
       "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores",
-    imgSrc: "C:\Users\Admin\Desktop\CS\website\FrontEndDev\Frontend-dev-project_1\assets\macaronProduct.png",
+    imgSrc: "../assets/macaronProduct.png",
+    imgid:"img3",
   },
   {
     id: 3,
@@ -33,7 +36,8 @@ const products = [
     instock: 5,
     description:
       "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores",
-    imgSrc: "C:\Users\Admin\Desktop\CS\website\FrontEndDev\Frontend-dev-project_1\assets\redVelvetProduct.png",
+    imgSrc: "../assets/redVelvetProduct.png",
+    imgid:"img4",
   },
   {
     id: 4,
@@ -42,7 +46,8 @@ const products = [
     instock: 4,
     description:
       "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores",
-    imgSrc: "C:\Users\Admin\Desktop\CS\website\FrontEndDev\Frontend-dev-project_1\assets\whiteChocProduct.png",
+    imgSrc: "../assets/whiteChocProduct.png",
+    imgid:"img5",
   },
   {
     id: 5,
@@ -51,7 +56,8 @@ const products = [
     instock: 8,
     description:
       "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores",
-    imgSrc: "C:\Users\Admin\Desktop\CS\website\FrontEndDev\Frontend-dev-project_1\assets\blueberryProduct.png",
+    imgSrc: "../assets/blueberryProduct.png",
+    imgid:"img6",
   },
   {
       id: 6,
@@ -60,19 +66,15 @@ const products = [
       instock: 8,
       description:
         "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores",
-      imgSrc: "C:\Users\Admin\Desktop\CS\website\FrontEndDev\Frontend-dev-project_1\assets\pistachioProduct.png",
+      imgSrc: "../assets/pistachioProduct.png",
+      imgid:"img7",
     },
 ];
 
-// Iterate over the 'products' array and assign each item to the 'product' variable
-for (let i = 0; i < products.length; i++) {
-  product = products[i];
-  console.log(product); 
-}
-
-//ADD TO CART
 function addToCart(id){
-  console.log(id);
+  products.forEach( (product) => {
+    console.log(id);
+  });
 }
 
 //cart slides in from the right
@@ -94,6 +96,5 @@ for (let i=0; i < removeCartItem.length; i++){
   button.addEventListener("click", function(event){
     var buttonClicked = event.target;
     buttonClicked.parentElement.parentElement.remove();
-  });
-}
-
+  })
+};
