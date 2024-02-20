@@ -4,10 +4,11 @@ const parentElement = document.querySelector("#buyItems");
 const products = document.querySelectorAll(".product");
 
 //const countTheSumPrice = function(){
-//  let sumPrice = 0;
-//  productsInCart.forEach(product =>{
-//      sumPrice += product.price;
+//  let sum = 0;
+//  productsInCart.forEach(item =>{
+//      sum += item.price;
 //  });
+//  return sum;
 //}
 
 const updateShoppingCartHTML = function(){
@@ -15,25 +16,26 @@ const updateShoppingCartHTML = function(){
     let result = productsInCart.map(product =>{ //inner HTML does not change
       return `
       <li class="buyItem">
+        <div class="buyItem-item">
         <img src="${product.image}">
-        <div>
-          <h5>${product.name}</h5>
+        <h5>${product.name}</h5>
+        </div>
+        <div class="buyItem-price">
           <h6>$${product.price}</h6>
-          <div>
-            <button class="button-minus" data-id=${product.id}>-</button>  
-            <span class="countOfProduct">${product.count}</span>
-            <button class="button-plus" data-id=${product.id}>+</button>
-          </div>
+        </div>
+        <div class="buyItem-quantity">
+          <button class="button-minus" data-id=${product.id}>-</button>  
+          <span class="countOfProduct">${product.count}</span>
+          <button class="button-plus" data-id=${product.id}>+</button>
         </div>
       </li>`
   });
-    parent.innerHTML =result.join('');
+    parentElement.innerHTML = result.join('');
     cartSumPrice.innerHTML = "$" + countTheSumPrice(); 
     console.log("kmy") //works
   }
   else{
     parentElement.innerHTML = '<h4 class="empty">Your shopping cart is empty</h4>'
-    console.log("PLease")
     cartSumPrice.innerHTML = ""; 
   }
   console.log("txt");
@@ -41,7 +43,7 @@ const updateShoppingCartHTML = function(){
 }
 
 function updateProductsInCart(product){ //works
-  for(let i=0; i<productsInCart.length; i++){
+  for(let i = 0; i < productsInCart.length; i++){
     if(productsInCart[i].id == product.id){
       productsInCart[i].count +=1;
       productsInCart[i].price = productsInCart[i].basePrice * productsInCart[i].count;
@@ -52,20 +54,20 @@ function updateProductsInCart(product){ //works
   console.log("test"); //works
 }
 
-products.forEach(product => {
-  product.addEventListener("click", (event)=>{ //works
+products.forEach(item => {
+  item.addEventListener("click", (event)=>{ //works
     if (event.target.classList.contains("btn-cart")){
       const productID = event.target.dataset.productId;
-      const productName = product.querySelector(".product-name").innerHTML;
-      const productPrice = product.querySelector(".priceValue").innerHTML;
-      const productImage = product.querySelector("img").src;
+      const productName = item.querySelector(".product-name").innerHTML;
+      const productPrice = item.querySelector(".priceValue").innerHTML;
+      const productImage = item.querySelector("img").src;
 
       let productToCart ={
         name: productName,
         image: productImage,
         id: productID,
         count: 1,
-        price: +productPrice,
+        price: +productPrice ,
         basePrice: +productPrice
       }
       console.log("Hello World"); //works
