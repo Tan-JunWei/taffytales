@@ -236,8 +236,11 @@ body{
 }
 
 #img5{
-    height:260px;
+    padding-top:20px;
+    height:210px;
     padding-left: 25px;
+    object-fit: cover;
+    border-radius: 10%;
 }
 
 #img6{
@@ -313,7 +316,7 @@ body{
 }
 
 /* cart header */
-.cart-header, .cart-item{
+.cart-row, .cart-item{
     display:flex;
     justify-content: space-around;
     padding: 10px 0;

@@ -15,6 +15,7 @@
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Quicksand&display=swap');
     </style>
+    <script src="../functionality/cart.js" async></script>
     <script src="../functionality/index.js" defer></script>
     <script src="https://kit.fontawesome.com/b929ffe868.js" crossorigin="anonymous"></script>
     <script src="https://www.w3schools.com/lib/w3.js"></script>
@@ -77,7 +78,7 @@
                             <img id="img2" src="../assets/chocolateProduct.png" alt="product image">
                         </div>
                         <div class="product-btns">
-                            <button type="button" class="btn-cart" onclick="addToCart($(product.id))">add to cart
+                            <button type="button" class="btn-cart" onclick="addToCart(`${product.id}`)">add to cart
                                 <span><i class="fa-regular fa-plus"></i></span>
                             </button>
                             <button type="button" class="btn-buy">buy now
@@ -114,7 +115,7 @@
                             <img id="img3" src="../assets/macaronProduct.png" alt="product image">
                         </div>
                         <div class="product-btns">
-                            <button type="button" class="btn-cart" onclick="addToCart($(product.id))">add to cart
+                            <button type="button" class="btn-cart" onclick="addToCart(`${product.id}`)">add to cart
                                 <span><i class="fa-regular fa-plus"></i></span>
                             </button>
                             <button type="button" class="btn-buy">buy now
@@ -151,7 +152,7 @@
                             <img id="img4" src="../assets/redVelvetProduct.png" alt="product image">
                         </div>
                         <div class="product-btns">
-                            <button type="button" class="btn-cart" onclick="addToCart($(product.id))">add to cart
+                            <button type="button" class="btn-cart" onclick="addToCart(`${product.id}`)">add to cart
                                 <span><i class="fa-regular fa-plus"></i></span>
                             </button>
                             <button type="button" class="btn-buy">buy now
@@ -177,13 +178,13 @@
                 </div>
                 <!--end of 4th single product-->
                 <!--5th single product-->
-                 <div class="product" data-name="p-5">
+                <div class="product" data-name="p-5">
                     <div class="product-content">
                         <div class="product-img">
                             <img id="img5" src="../assets/whiteChocProduct.png" alt="product image">
                         </div>
                         <div class="product-btns">
-                            <button type="button" class="btn-cart" onclick="addToCart($(product.id))">add to cart
+                            <button type="button" class="btn-cart" onclick="addToCart(`${product.id}`)">add to cart
                                 <span><i class="fa-regular fa-plus"></i></span>
                             </button>
                             <button type="button" class="btn-buy">buy now
@@ -215,7 +216,7 @@
                             <img id="img6" src="../assets/blueberryProduct.png" alt="product image">
                         </div>
                         <div class="product-btns">
-                            <button type="button" class="btn-cart" onclick="addToCart($(product.id))">add to cart
+                            <button type="button" class="btn-cart" onclick="addToCart(`${product.id}`)">add to cart
                                 <span><i class="fa-regular fa-plus"></i></span>
                             </button>
                             <button type="button" class="btn-buy">buy now
@@ -247,7 +248,7 @@
                             <img id="img7" src="../assets/pistachioProduct.png" alt="product image">
                         </div>
                         <div class="product-btns">
-                            <button type="button" class="btn-cart" onclick="addToCart($(product.id))">add to cart
+                            <button type="button" class="btn-cart" onclick="addToCart(`${product.id}`)">add to cart
                                 <span><i class="fa-regular fa-plus"></i></span>
                             </button>
                             <button type="button" class="btn-buy">buy now
@@ -287,25 +288,43 @@
             <div class="total-items-in-cart">0</div>
         </div>
 
-        <div class="cart-header">
-            <div class="column1">Item</div>
-            <div class="column2">Unit price</div>
-            <div class="column3">Units</div>
+        <div class="cart-header cart-row">
+            <div class="column1 cart-item">Item</div>
+            <div class="column2 cart-price">Price</div>
+            <div class="column3 cart-quantity">Quantity</div>
         </div>
         <div class="cart-items">
             <!-- render cart items here -->
-            <div class="cart-item">
-                <div class="item-info">
-                    <img src="../assets/marshmallowProduct.png" alt="Confectionery 1">
-                    <h4>FluffyCloud Bites</h4>
+            <div class="cart-row">
+                <div class="cart-item">
+                    <div class="item-info remove">
+                        <img src="../assets/marshmallowProduct.png" alt="Confectionery 1">
+                        <h4>FluffyCloud Bites</h4>
+                    </div>
+                    <div class="unit-price cart-price">
+                        <small>$</small>11.25
+                    </div>
+                    <div class="units">
+                        <div class="btn minus">-</div>
+                        <input class="cart-quantity-input" type="number" value="1">
+                        <div class="btn plus">+</div>           
+                    </div>
                 </div>
-                <div class="unit-price">
-                    <small>$</small>11.25
-                </div>
-                <div class="units">
-                    <div class="btn minus">-</div>
-                    <div class="number">1</div>
-                    <div class="btn plus">+</div>           
+            </div>
+            <div class="cart-row">
+                <div class="cart-item">
+                    <div class="item-info remove">
+                        <img src="../assets/chocolateProduct.png" alt="Confectionery 2">
+                        <h4>DivineCocoa Euphoria</h4>
+                    </div>
+                    <div class="unit-price cart-price">
+                        <small>$</small>10.00
+                    </div>
+                    <div class="units">
+                        <div class="btn minus">-</div>
+                        <input class="cart-quantity-input" type="number" value="1">
+                        <div class="btn plus">+</div>           
+                    </div>
                 </div>
             </div>
         </div>
@@ -329,8 +348,7 @@
         w3.includeHTML();
     </script>
 
-    <script src="../functionality/productsInfo.js"></script>
-    <script src="../functionality/cart.js"></script>
+    
 
 </body>
 </html>
