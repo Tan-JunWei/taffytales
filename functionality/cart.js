@@ -17,16 +17,18 @@ const updateShoppingCartHTML = function(){
       return `
       <li class="buyItem">
         <div class="buyItem-item">
-        <img src="${product.image}">
-        <h5>${product.name}</h5>
+          <img src="${product.image}">
+          <h5>${product.name}</h5>
         </div>
         <div class="buyItem-price">
           <h6>$${product.price}</h6>
         </div>
         <div class="buyItem-quantity">
-          <button class="button-minus" data-id=${product.id}>-</button>  
-          <span class="countOfProduct">${product.count}</span>
-          <button class="button-plus" data-id=${product.id}>+</button>
+          <div class="quantity-button-container">
+            <button class="button-minus" data-id=${product.id}>-</button>  
+            <span class="countOfProduct">${product.count}</span>
+            <button class="button-plus" data-id=${product.id}>+</button>
+          </div>
         </div>
       </li>`
   });
