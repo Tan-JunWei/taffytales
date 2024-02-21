@@ -87,7 +87,6 @@ body{
     position: relative;
     min-width: 344px;
     min-height: 515px;
-
 }
 
 .product-content{
@@ -162,6 +161,11 @@ body{
     font-size: 1.2rem;
     text-transform: uppercase;
     font-weight: bold;
+}
+
+.priceValue{
+    opacity:0;
+    position:absolute;
 }
 
 .product-price, .product-price-nosale{
@@ -252,6 +256,7 @@ body{
     width:auto;
     padding-left: 23px;
 }
+
 /*shopping cart button styling */
 #shopping-cart-btn{
     position: absolute;
@@ -276,6 +281,22 @@ body{
     color:var(--dark-purple);
 }
 /* CART */
+.closeCart{
+    position: absolute;
+    left:10px;
+    top:10px;
+    background: none;
+    border: none;
+}
+
+.closeCart span{
+    color:rgb(255, 255, 255);
+}
+
+.closeCart:hover{
+    cursor:pointer;
+}
+
 .shopping-bag h3{
     font-size: 22px;
 }
@@ -314,70 +335,78 @@ body{
     z-index: 100;
     border-radius: 20px 12px 20px 20px;
     overflow-y:scroll;
+    overflow-x: hidden;
     max-height: fit-content;
     border-bottom: solid 1.1rem var(--sweet-blue);
 }
 
 /* cart header */
-.cart-row, .cart-item{
+.cart-header{
     display:flex;
     justify-content: space-around;
     padding: 10px 0;
+    font-size: 16px;
+    font-weight: 500;
+    font-family: "Roboto";
 }
 
-/*cart items */
-.cart-items{
-    max-height: calc(100vh-247px);
-    overflow-y: auto;
-    overflow-x:hidden;
+/* add to cart styles */
+#buyItems h4{
+    margin-top:20rem;
+    text-align: center;
+    margin-bottom: 20rem;
 }
 
-.cart-item div{
-    display:flex;
+.buyItem{
+    display:grid;
+    grid-template-columns: repeat(3, 1fr);
+    font-size: 16px;
+    font-weight: 900;
+    background:var(--pale-pink);
+    border: solid 0.5rem var(--sweet-blue);
+    border-radius: 1.5rem;
+    min-height: 200px;
+    margin-inline: 0.5rem;
+}
+
+.buyItem img{
+    width:7rem;
+    border-radius:30%;
+    margin-top:1rem;
+}
+
+.buyItem-quantity, .buyItem-item{
+    text-align: center;
+}
+
+.buyItem-price h6{
+    font-size: 14px;
+}
+
+.buyItem-price{
+    display:grid;
     align-items: center;
-    justify-content: center;
+    text-align: center;
 }
 
-/* item info */
-.cart-item .item-info{
-    flex:1;
-    background-color: rgba(255,255,255,0.6);
-    border-radius: 0 10px 10px 0;
+.buyItem-quantity .quantity-button-container{
+    display:flex;
+    height:200px;
+    font-size:1rem;
     padding:10px;
+    grid-template-columns: repeat(3,1fr);
+    align-items: center;
 }
 
-.cart-item .item-info:hover {
-    background-color: rgba(255, 0, 0, 0.55);
-    cursor: pointer;
-}
-
-.cart-item .item-info img {
-    width: 75px;
-}
-
-/* unit price */
-.cart-item .unit-price{
-    flex:1;
+.buyItem-quantity .quantity-button-container button{
+    margin-inline: 10px;
     font-size:1.2rem;
-}
-
-/* units */
-.cart-items .units{
-    flex:1;
-}
-
-.cart-item .units .number{
-    margin:0 10px;
-    font-size: 1.2rem;
-}
-
-.cart-item .units .btn{
-    width:20px;
-    height:20px;
+    width:22px;
+    height:22px;
     background-color:var(--yellow-forcart);
     border-radius:50%;
-    font-weight: bold;
     cursor: pointer;
+    border: 1px solid black;
 }
 
 /* cart footer */
@@ -401,52 +430,14 @@ body{
 
 .cart-footer .subtotal {
     background-color: white;
+    font-size:20px;
+    font-weight:700;
 }
 
 .cart-footer .checkout {
     background-color: var(--yellow-forcart);  
     cursor: pointer;
-}
-
-#buyItems h4{
-    margin-top:20rem;
-    text-align: center;
-    margin-bottom: 20rem;
-}
-
-/* add to cart styles */
-.buyItem{
-    display:grid;
-    grid-template-columns: repeat(3, 1fr);
-    font-size: 16px;
-    font-weight: 900;
-    background:var(--pale-pink);
-    border: solid 0.5rem var(--sweet-blue);
-    border-radius: 1.5rem;
-    min-height: 200px;
-    margin-inline: 0.5rem;
-}
-
-.buyItem img{
-    width:7rem;
-    border-radius:30%;
-    margin-top:1rem;
-}
-
-.buyItem-quantity, .buyItem-item{
-    text-align: center;
-}
-
-.buyItem-price, .quantity-button-container{
-    display:grid;
-    align-items: center;
-    text-align: center;
-}
-
-.quantity-button-container{
-    padding:10px;
-    grid-template-columns: repeat(3,1fr);
-    margin-top: 5rem;
+    font-size:23px; 
 }
 
 /*styles for scrollbar in cart */

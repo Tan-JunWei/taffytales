@@ -61,9 +61,10 @@
                                 <span><i class="fa-solid fa-star"></i></span>
                             </div>
                         </div>
-                        <a href="#" class="product-name">FluffyCloud Bites,<br> new product</a>
+                        <a href="#" class="product-name">FluffyCloud Bites<br> (new product)</a>
                         <p class="product-price">$ 15.00</p>
-                        <p class="product-price priceValue">$ 11.25</p>
+                        <p class="product-price">$ 11.25</p>
+                        <p class="priceValue"> 11.25</p>
                     </div>
 
                     <div class="off-info">
@@ -98,9 +99,10 @@
                                 <span><i class="fa-regular fa-star"></i></span>
                             </div>
                         </div>
-                        <a href="#" class="product-name">DivineCocoa Euphoria,<br> new product</a>
+                        <a href="#" class="product-name">DivineCocoa Euphoria<br> (new product)</a>
                         <p class="product-price">$ 12.50</p>
-                        <p class="product-price priceValue">$ 10.00</p>
+                        <p class="product-price">$ 10.00</p>
+                        <p class="priceValue"> 10.00</p>
                     </div>
 
                     <div class="off-info">
@@ -135,9 +137,10 @@
                                 <span><i class="fa-regular fa-star"></i></span>
                             </div>
                         </div>
-                        <a href="#" class="product-name">Heavenly Hues Macarons,<br> new product</a>
+                        <a href="#" class="product-name">Heavenly Hues Macarons<br> (new product)</a>
                         <p class="product-price">$ 19.00</p>
-                        <p class="product-price priceValue">$ 15.20</p>
+                        <p class="product-price">$ 15.20</p>
+                        <p class="priceValue"> 15.20</p>
                     </div>
 
                     <div class="off-info">
@@ -173,7 +176,8 @@
                             </div>
                         </div>
                         <a href="#" class="product-name">Minty Velvet Fudge</a>
-                        <p class="product-price-nosale priceValue">$ 15.00</p>
+                        <p class="product-price-nosale">$ 15.00</p>
+                        <p class="priceValue"> 15.00</p>
                     </div>
                 </div>
                 <!--end of 4th single product-->
@@ -205,7 +209,8 @@
                             </div>
                         </div>
                         <a href="#" class="product-name">White Chocolate Whisper</a>
-                        <p class="product-price-nosale priceValue">$ 16.50</p>
+                        <p class="product-price-nosale">$ 16.50</p>
+                        <p class="priceValue"> 16.50</p>
                     </div>
                 </div>
                 <!--end of 5th single product-->
@@ -237,7 +242,8 @@
                             </div>
                         </div>
                         <a href="#" class="product-name">Blueberry Bliss Buttons</a>
-                        <p class="product-price-nosale priceValue">$ 17.90</p>
+                        <p class="product-price-nosale">$ 17.90</p>
+                        <p class="priceValue"> 17.90</p>
                     </div>
                 </div>
                 <!--end of 6th single product-->
@@ -269,7 +275,8 @@
                             </div>
                         </div>
                         <a href="#" class="product-name">Pistachio Dream Drops</a>
-                        <p class="product-price-nosale priceValue">$ 16.70</p>
+                        <p class="product-price-nosale">$ 16.70</p>
+                        <p class="priceValue"> 16.70</p>
                     </div>
                 </div>
                 <!--end of 7th single product-->
@@ -283,12 +290,13 @@
     <!--cart layout-->
     <div class="cart">
         <div class="shopping-bag">
+            <button class="closeCart" onclick ="hideShowCart()"><span class="material-symbols-outlined">keyboard_double_arrow_right</span></button>
             <span class="material-symbols-outlined">shopping_bag</span>
             <h3>Cart</h3>
             <div class="total-items-in-cart">0</div>
         </div>
 
-        <div class="cart-header cart-row">
+        <div class="cart-header">
             <div class="column1">Item</div>
             <div class="column2">Price</div>
             <div class="column3">Quantity</div>
@@ -297,18 +305,23 @@
             <!-- render cart items here -->
             <ul id="buyItems">
                 <h4 class="empty">Your shopping cart is empty</h4>
-                <!-- <li class="buyItem">
-                    <img src="Images/producs-images/Mobiles/galaxynote10.png">
-                    <div>
-                        <h5>Products Name</h5>
-                        <h6>$199</h6>
-                        <div>
-                            <button>-</button>
-                            <span class="countOfProduct">1</span>
-                            <button>+</button>
+                <!--<li class="buyItem">
+                        <div class="buyItem-item">
+                            <img src="${product.image}">
+                            <h5>${product.name}</h5>
                         </div>
-                    </div>
-                </li> -->
+                        <div class="buyItem-price">
+                            <h6>$${product.price.toFixed(2)}</h6>
+                        </div>
+                        <div class="buyItem-quantity">
+                            <div class="quantity-button-container">
+                                <button class="button-minus" data-id=${product.id}>-</button>  
+                                <span class="countOfProduct">${product.count}</span>
+                                <button class="button-plus" data-id=${product.id}>+</button>
+                            </div>
+                        </div>
+                    </li> 
+                -->
             </ul>
         </div>
         <div class="cart-footer">
@@ -316,7 +329,7 @@
                 Subtotal (0 items): $0
             </div>
             <div class="checkout">
-                Proceed to checkout
+                Proceed To Checkout
             </div>
         </div>
     </div>
