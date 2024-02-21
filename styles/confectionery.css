@@ -412,7 +412,6 @@ body{
 /* cart footer */
 .cart-footer {
     width: 92%;
-    background-color: rgb(255, 21, 21);
     position: relative;
     top:3rem;
     margin-left:1.2rem;
@@ -434,10 +433,121 @@ body{
     font-weight:700;
 }
 
-.cart-footer .checkout {
-    background-color: var(--yellow-forcart);  
+.cart-footer .checkout{
+    background-color: var(--yellow-forcart);   
+}
+
+#payment-link{
+    width:100%;
     cursor: pointer;
-    font-size:23px; 
+    font-size:23px;
+    font-weight: 700;
+    color: var(--hollow-purple);
+    text-decoration: none;
+    border:none;
+    background: none;
+}
+
+#payment-link:hover{
+    font-style:italic;
+    color:var(--dark-purple);
+}
+
+.payment-container{
+    /* top:0; */
+    position: absolute;
+    z-index: 10;
+    text-transform: capitalize;
+    transition: all .2s linear;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    padding:25px; 
+    min-height: 100vh;
+    width:100%;
+    background: linear-gradient(90deg, #2ecc71, #6593d4 60%);
+    padding-bottom: 70px;
+}
+
+.payment-container form{
+    padding:20px;
+    width:900px;
+    background:white;
+}
+
+.payment-container form .payment-row{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.payment-container form .payment-row .payment-col{
+    flex:1 1  250px;
+}
+
+.payment-container form .payment-row .payment-col span{
+    font-size:15px;
+    font-weight: 500;
+}
+
+.payment-container form .payment-row .payment-col .payment-title{
+    font-size: 20px;
+    color:#333;
+    padding-bottom:5px;
+    text-transform:uppercase;
+}
+
+.payment-container form .payment-row .payment-col .inputBox{
+    margin: 15px 0;
+}
+
+.payment-container form .payment-row .payment-col .inputBox span{
+    margin-bottom: 10px;
+    display: block;
+}
+
+.payment-container form .payment-row .payment-col .inputBox input{
+    width:100%;
+    border:1px solid rgb(222, 221, 221);
+    padding:10px 15px;
+    font-size:15px;
+    text-transform: none;
+}
+
+.payment-container form .payment-row .payment-col .inputBox input:focus{
+    border:1px solid black;
+}
+
+.payment-container form .payment-row .payment-col .flex{
+    display:flex;
+    gap:15px;
+}
+
+.payment-container form .payment-row .payment-col .flex .inputBox{
+    margin-top:5px;
+}
+
+.payment-options{
+    height:32px;
+    margin-top:5px;
+    margin-inline: 2px;
+    filter: drop-shadow(0 0 1px #000);
+}
+
+.payment-container form .submit-btn{
+    width:100%;
+    padding:12px;
+    font-size: 17px;
+    background: #25ae60;
+    color:#fff;
+    margin-top: 5px;
+    cursor: pointer;
+    border: none;
+    text-transform: capitalize;
+}
+
+.payment-container form .submit-btn:hover{
+    background: #419164;
 }
 
 /*styles for scrollbar in cart */
