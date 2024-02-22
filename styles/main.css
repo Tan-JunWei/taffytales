@@ -468,3 +468,10 @@ ul{
     height:32px;
     margin: 7px;
 }
+
+.animated-element{
+    margin-top: 10rem;
+    background: #fff;
+    width:25%;
+    height: 4rem;
+}

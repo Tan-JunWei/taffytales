@@ -105,9 +105,11 @@
       <a href="../admin/confectionery.html" class="btn"><span>Browse More!</span></a>
     </div>
     
+    <div class="animated-element">hello</div>
+
     <!--footer-->
     <div w3-include-html="footer.html"></div>
-  
+    
   <script>  
     w3.includeHTML(navFunctionWrapper);
   </script>
@@ -116,13 +118,12 @@
     w3.includeHTML();
   </script>
   
-
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script> <!--gsap-->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/gh/studo-freight/lenis@1/bundled/lenis.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/gh/studo-freight/lenis@1/bundled/lenis.min.js"></script>
+  
   <script>
-    
-    //smooth scroll
+    //smooth scroll (lenis)
     const lenis = new Lenis()
 
     lenis.on('scroll', (e) => {
@@ -136,6 +137,9 @@
 
     requestAnimationFrame(raf)
   </script>
+  
+  <!--gsap script-->
+  <script src="../functionality/gsap.js"></script>
 
   </body>
 </html>
