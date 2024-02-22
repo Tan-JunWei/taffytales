@@ -328,9 +328,9 @@
             <div class="subtotal">
                 Subtotal (0 items): $0
             </div>
-            <button id="payment-link">
+            <button id="payment-link" onclick="paymentContainerReveal()">
                 <div class="checkout">
-                    Proceed To Checkout
+                    proceed to payment
                 </div>
             </button>
         </div>
@@ -338,77 +338,78 @@
 
     <!--payment gateway-->
     <div class="payment-container">
+        <button class="closePaymentContainer" onclick ="hideShowPaymentContainer()"><span class="material-symbols-outlined">cancel</span></button>
         <form action="">
             <div class="payment-row">
                 <div class="payment-col">
                     <h3 class="payment-title">billing address</h3>
 
-                    <div class="inputBox">
-                        <span>full name: </span>
-                        <input type="text" placeholder="Keefe Cheong">
-                    </div>
-                    <div class="inputBox">
-                        <span>email: </span>
-                        <input type="email" placeholder="example@example.com">
-                    </div>
-                    <div class="inputBox">
-                        <span>address: </span>
-                        <input type="text" placeholder="123 Bedok North Avenue 3">
-                    </div>
-                    <div class="inputBox">
-                        <span>city: </span>
-                        <input type="text" placeholder="Dubai">
-                    </div>
-
-                    <div class="flex">
                         <div class="inputBox">
-                            <span>state: </span>
-                            <input type="text" placeholder="Arizona">
+                            <span>full name: </span>
+                            <input type="text" placeholder="Keefe Cheong">
                         </div>
                         <div class="inputBox">
-                            <span>zip code: </span>
-                            <input type="text" placeholder="123 456">
+                            <span>email: </span>
+                            <input type="email" placeholder="example@example.com">
+                        </div>
+                        <div class="inputBox">
+                            <span>address: </span>
+                            <input type="text" placeholder="123 Bedok North Avenue 3">
+                        </div>
+                        <div class="inputBox">
+                            <span>city: </span>
+                            <input type="text" placeholder="Dubai">
+                        </div>
+
+                        <div class="flex">
+                            <div class="inputBox">
+                                <span>state: </span>
+                                <input type="text" placeholder="Arizona">
+                            </div>
+                            <div class="inputBox">
+                                <span>zip code: </span>
+                                <input type="text" placeholder="123 456">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="payment-col">
+                        <h3 class="payment-title">payment</h3>
+                        
+                        <div class="inputBox">
+                            <span>cards accepted: </span>
+                            <img class="payment-options" src="../assets/amazon.png"/>
+                            <img class="payment-options" src="../assets/american-express.png"/>
+                            <img class="payment-options" src="../assets/mastercard.png"/>
+                            <img class="payment-options" src="../assets/paypal.png"/>
+                            <img class="payment-options" src="../assets/visa.png"/>
+                        </div>
+
+                        <div class="inputBox">
+                            <span>name on card: </span>
+                            <input type="text" placeholder="Mr. Keefe Cheong">
+                        </div>
+                        <div class="inputBox">
+                            <span>credit card number: </span>
+                            <input type="number" placeholder="1111-2222-3333-4444">
+                        </div>
+                        <div class="inputBox">
+                            <span>expiry month: </span>
+                            <input type="text" placeholder="February">
+                        </div>
+
+                        <div class="flex">
+                            <div class="inputBox">
+                                <span>expiry year: </span>
+                                <input type="number" placeholder="2024">
+                            </div>
+                            <div class="inputBox">
+                                <span>CVV: </span>
+                                <input type="text" placeholder="567">
+                            </div>
                         </div>
                     </div>
                 </div>
-
-                <div class="payment-col">
-                    <h3 class="payment-title">payment</h3>
-                    
-                    <div class="inputBox">
-                        <span>cards accepted: </span>
-                        <img class="payment-options" src="../assets/amazon.png"/>
-                        <img class="payment-options" src="../assets/american-express.png"/>
-                        <img class="payment-options" src="../assets/mastercard.png"/>
-                        <img class="payment-options" src="../assets/paypal.png"/>
-                        <img class="payment-options" src="../assets/visa.png"/>
-                    </div>
-
-                    <div class="inputBox">
-                        <span>name on card: </span>
-                        <input type="text" placeholder="Mr. Keefe Cheong">
-                    </div>
-                    <div class="inputBox">
-                        <span>credit card number: </span>
-                        <input type="number" placeholder="1111-2222-3333-4444">
-                    </div>
-                    <div class="inputBox">
-                        <span>expiry month: </span>
-                        <input type="text" placeholder="February">
-                    </div>
-
-                    <div class="flex">
-                        <div class="inputBox">
-                            <span>expiry year: </span>
-                            <input type="number" placeholder="2024">
-                        </div>
-                        <div class="inputBox">
-                            <span>CVV: </span>
-                            <input type="text" placeholder="5678">
-                        </div>
-                    </div>
-                </div>
-            </div>
 
             <input type="submit" value="proceed to checkout" class="submit-btn">
 

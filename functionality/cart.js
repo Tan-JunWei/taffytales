@@ -102,6 +102,7 @@ function hideShowCart() {
     }
 }
 
+// increase or decrease item count using minus and plus buttons
 parentElement.addEventListener("click", (event)=> {
   const isPlusButton = event.target.classList.contains("button-plus");
   const isMinusButton = event.target.classList.contains("button-minus");
@@ -125,3 +126,19 @@ parentElement.addEventListener("click", (event)=> {
 });
 
 updateShoppingCartHTML();
+
+const paymentContainer = document.querySelector(".payment-container");
+//reveal payment container after proceed to payment button is clicked
+function paymentContainerReveal(){
+  if (paymentContainer.style.display="none"){
+    paymentContainer.style.display="inline-block";
+    hideShowCart();
+  }
+}
+
+//opposite of earlier function
+function hideShowPaymentContainer(){
+  if (paymentContainer.style.display="block"){
+    paymentContainer.style.display="none";
+  }
+}
