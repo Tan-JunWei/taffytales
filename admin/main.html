@@ -26,30 +26,35 @@
     <!--navigation-->
     <div w3-include-html="nav.html"></div>
     <script src="../functionality/nav.js"></script>
-  
-    <!--Image Slider-->
-    <section class="container">
-      <h1>Our latest products<span class="material-symbols-outlined">favorite</span></h1>
-      <div class="slider-wrapper">
-        <div class="slider">
-          <img id="slide-1" src="../assets/candy-1.jpg" alt="Image of candy">
-          <img id="slide-2" src="../assets/candy-2.jpg" alt="Image of chocolate">
-          <img id="slide-3" src="../assets/candy-3.jpg" alt="Image of macarons">
-        </div>
-        <div class="slider-nav">
-            <a href="#slide-1"></a>
-            <a href="#slide-2"></a>
-            <a href="#slide-3"></a>
-        </div>
-      </div>
-    </section>
     
+    <h1 class="hide-on-scroll">Taffy Tales</h1>
+
+    <section>
+      <div class="line"></div>
+      <div class="line"></div>
+      <div class="line"></div>
+    </section>
+  
+    <section id="image-section">
+      <div class="img"></div>
+      <div class="img"></div>
+      <div class="img"></div>
+      <div class="img"></div>
+      <div class="img"></div>
+      <div class="img"></div>
+      <div class="img"></div>
+      <div class="img"></div>
+      <div class="img"></div>
+    </section>
+
     <!--Link to Our Products Page(Buy Now)-->
     <a href="../admin/confectionery.html"><button id="buyNow"><span class="material-symbols-outlined">shopping_cart</span>buy now</button></a>
 
     <!--scroll-reveal Intro-->
     <section class="scroll-reveal">
-      <h2 class="section-title"><span>~Sweet Bliss Awaits~</span></h2>
+      <div class="scrollreveal-top">
+        <h2 class="section-title"><span>~Sweet Bliss Awaits~</span></h2>
+      </div>
         <p>
           <span>
           Satisfy your sweet cravings at Taffy Tales!<br>
@@ -104,8 +109,6 @@
     <div class="cta-container">
       <a href="../admin/confectionery.html" class="btn"><span>Browse More!</span></a>
     </div>
-    
-    <div class="animated-element">hello</div>
 
     <!--footer-->
     <div w3-include-html="footer.html"></div>
@@ -124,18 +127,15 @@
   
   <script>
     //smooth scroll (lenis)
-    const lenis = new Lenis()
-
-    lenis.on('scroll', (e) => {
-      console.log(e)
+    const lenis = new lenis ({
+      duration: 1.2,
+      easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t))
     })
 
-    function raf(time) {
+    function raf(time){
       lenis.raf(time)
       requestAnimationFrame(raf)
     }
-
-    requestAnimationFrame(raf)
   </script>
   
   <!--gsap script-->
