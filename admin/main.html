@@ -91,7 +91,7 @@
       </div></a>
 
       <a href="../admin/confectionery.html"><div id="buttons" class="hidden card">
-        <img id= "best-4" src="../assets/blueberry_buttons.jpg.png" alt="Picture of Blueberry Bliss Buttons">
+        <img id= "best-4" src="../assets/blueberry_buttons.jpg" alt="Picture of Blueberry Bliss Buttons">
         <div class="intro">
           <h3>Blueberry Bliss Buttons</h3>
           <p><span>Blueberry Bliss Buttons:</span> Bursting with the sweet essence of ripe blueberries, each button offers a delightful pop of fruity flavor, encapsulating pure bliss in every bite.</p>
@@ -107,13 +107,34 @@
     
     <!--footer-->
     <div w3-include-html="footer.html"></div>
-
+  
   <script>  
     w3.includeHTML(navFunctionWrapper);
   </script>
   
   <script>
     w3.includeHTML();
+  </script>
+  
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script> <!--gsap-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/studo-freight/lenis@1/bundled/lenis.min.js"></script>
+  <script>
+    
+    //smooth scroll
+    const lenis = new Lenis()
+
+    lenis.on('scroll', (e) => {
+      console.log(e)
+    })
+
+    function raf(time) {
+      lenis.raf(time)
+      requestAnimationFrame(raf)
+    }
+
+    requestAnimationFrame(raf)
   </script>
 
   </body>
