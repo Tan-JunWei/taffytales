@@ -18,6 +18,36 @@ body{
     overflow-x: hidden;
 }
 
+/* 3d image animation */
+.wrapper {
+	margin: auto;
+    background-image: url("../assets/candyBanner.jpg");
+    background-position: center;
+    background-size: cover;
+}
+
+.stage {	
+	height: 325px;
+	position: relative;
+    margin-left:28rem;
+}
+
+.box {
+	border: 5px solid #000;
+	border-radius: 10px;
+	position: absolute;
+	width: 185px;
+	height: 185px;	
+	display: inline-block;
+	margin: 10px 20px 20px 235px;
+	overflow: hidden;		
+}
+
+.box > img {
+	width: 185px;
+	height: auto;
+}
+
 /* utility stylings */
 .products img{
     width:100%;

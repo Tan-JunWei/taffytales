@@ -24,7 +24,53 @@
     <!--navigation-->
     <div w3-include-html="nav.html"></div>
     <script src="../functionality/nav.js"></script>
+    
+    <!--3d image animation-->
+    <div class="wrapper">
+        <div class="stage">
+            <div class="box">
+                <img src="https://img.freepik.com/free-photo/view-dessert-arrangement_23-2149022019.jpg?t=st=1708778377~exp=1708781977~hmac=abd9f27781a0b9b3b8d96b1802c507e9ce98f52fd3973d89d340a4d9efd770d4&w=740" width="285" height="285">
+            </div>
+            <div class="box">
+                <img src="https://img.freepik.com/free-photo/jelly-worms-spilled-from-jar-near-candies_23-2147717470.jpg?t=st=1708777349~exp=1708780949~hmac=39cc7ad5c24950b3817039ad7442c35e573a5bda330214f3c1c742140985c446&w=1060" width="285" height="285">
+            </div>
+            <div class="box">
+                <img src="https://img.freepik.com/free-photo/colorful-candies-jelly-marmalade-top-view_114579-7103.jpg?t=st=1708777375~exp=1708780975~hmac=a90be54f862ce0362a42adc8412bb23ab08189a3b9f8263e2b1eea3229d7ff7c&w=1480" style="width: 285px; height: auto;">
+            </div>
+            <div class="box">
+                <img src="../assets/purplemacarons.jpg" width="285" height="285">
+            </div>
+            <div class="box">
+                <img src="https://img.freepik.com/free-photo/marmalade-candies-overturned-glass-blue-background_114579-45569.jpg?t=st=1708778406~exp=1708782006~hmac=c8046cff9095d82f07c155791c30fc88fce60f7ea4ce63d811ab29831f60d80d&w=1480" style="width: 285px; height: auto;">
+            </div>
+            <div class="box">
+                <img src="https://img.freepik.com/free-photo/delicious-heart-shaped-sweets_23-2149066155.jpg?t=st=1708778624~exp=1708782224~hmac=8eda37cf88f175f5bf67a2e3744d928dc6d1d62d1bcbb0e21dcfc3f96f13b2fe&w=740" width="285" height="285">
+            </div>
+            <div class="box">
+                <img src="https://img.freepik.com/free-photo/top-view-assortment-sweets-cups_23-2148691433.jpg?t=st=1708778870~exp=1708782470~hmac=b32a29a50d83aaf685ea19b7d09b0aae45417b15cb8449769397e10ae54993ed&w=1060" width="285" height="285">
+            </div>
+            <div class="box">
+                <img src="../assets/candyempire.jpg" width="285" height="285">
+            </div>
+            <div class="box">
+                <img src="../assets/bluemacaron.jpg" width="285" height="285">
+            </div>
+            <div class="box">
+                <img src="../assets/chocolatey.jpg" width="285" height="285">
+            </div>
+            <div class="box">
+                <img src="../assets/greenbgcandy.jpg" width="285" height="285">
+            </div>
+            <div class="box">
+                <img src="https://i.pinimg.com/originals/4a/6c/40/4a6c40dcf94390b3cd77ea703d193841.jpg" width="285" height="285">
+            </div>
+            <div class="box">
+                <img src="../assets/purplelolipop.jpg.png" width="285" height="285">
+            </div>
+        </div>
+    </div>
 
+    <!--product purchase section-->
     <div class="products">
         <div class="container">
             <h1 class="lg-title">Discover Our Delectable Confections</h1>
@@ -425,8 +471,13 @@
     <script>
         w3.includeHTML();
     </script>
-
     
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script> <!--gsap-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+
+    <!--gsap script-->
+    <script src="../functionality/confectionery-gsap.js"></script>
 
 </body>
 </html>

@@ -369,6 +369,7 @@ h2 .material-symbols-outlined{
     font-weight: 700;
 }
 
+/* text animation etc */
 .customers-words{
     margin-top: 60vh;
     color:white;
@@ -393,12 +394,6 @@ h2 .material-symbols-outlined{
     background:transparent;
     width:58rem;
     margin-left:26rem;
-}
-
-.text-animation-line1{
-    font-family: "Almendra", serif;
-    margin-top:5rem;
-    color: rgb(253, 240, 218);
 }
 
 .text-animation-line3{

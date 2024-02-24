@@ -25,12 +25,8 @@ ScrollTrigger.create({
   onLeave: () => h1.classList.add('hide')
 });
 
-//first text animation
-gsap.fromTo(".text-animation-line1", {x:-200,}, {x: 2900, duration: 5.5, repeat:-1, scale:4, yoyo:true, ease: "back.out",});
-
-
 //3rd text animation
-gsap.fromTo(".text-animation-line3", {x:3000,y:900}, {x: 2500, y:-20, duration: 5, repeat:-1, scale:3, yoyo:true, ease:"expo.out",});
+gsap.fromTo(".text-animation-line3", {x:3000,y:900}, {x: 2400, y:-20, duration: 5, repeat:-1, scale:3, yoyo:true, ease:"expo.out",});
 
 //2nd text animation
 const lineTl = gsap.timeline({
