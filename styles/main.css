@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Almendra:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Trade+Winds&display=swap');
+
 * {
     box-sizing: border-box;
     margin:0;
@@ -15,7 +18,7 @@ body{
     overflow-x:hidden;
 }
 
-h1 { 
+.hide-on-scroll{ 
     font-size: 14rem; 
     font-family: 'Lemon';
     position: fixed;
@@ -366,123 +369,48 @@ h2 .material-symbols-outlined{
     font-weight: 700;
 }
 
-/* footer */
-.row{
-    display: flex;
-    flex-wrap: wrap;
+.customers-words{
+    margin-top: 60vh;
+    color:white;
+    text-align: center;
 }
 
-ul{
-    list-style: none;
+.customers-words #customers-words-title{
+    font-size:4rem;
 }
 
-.footer-col li{
-    font-family: "Sofia";
+.customers-words h1 span{
+    font-size:1.3rem;
 }
 
-.footer{
-    margin-top: 10rem;
-    line-height: 1.5;
+.text-animation-line{
+    background:transparent;
 }
 
-.footer-col{
-    width: 33%;
-    padding: 0 15px;
+.text-animation2{
+    margin-top:12rem;
+    overflow:hidden;
+    background:transparent;
+    width:58rem;
+    margin-left:26rem;
 }
 
-.footer-col h4, .copyright h3{
-    color: #ffffff;
+.text-animation-line1{
+    font-family: "Almendra", serif;
+    margin-top:5rem;
+    color: rgb(253, 240, 218);
+}
+
+.text-animation-line3{
+    margin-top:16rem;
+    color: rgb(218, 251, 253);
+    font-size: 2rem;
+}
+
+.text-animation-line2{
     text-transform: capitalize;
-    font-weight: 500;
-    font-family: "Amita";
-}
-
-.footer-col h4{
-    font-size: 22px;
-    position:relative;
-    margin-bottom:38px;
-}
-
-.footer-col h4::before{
-    content: '';
-    position: absolute;
-    left:0;
-    bottom:-10px;
-    background-color: #e91e63;
-    height:2px;
-    box-sizing: border-box;
-    width: 85px;
-}
-
-.footer-col ul li{
-    margin-bottom: 10px;
-}
-
-.footer-col ul li a{
-    font-size: 18px;
-    text-transform:capitalize;
-    color:rgba(213, 252, 241, 0.55);
-    font-weight:300;
-    display:block;
-    transition:all 0.3s ease;
-    text-decoration: none;
-    font-family: "Amita","sans-serif";
-}
-
-.footer-col ul li a:hover{
-    padding-left: 9px;
-    color: var(--orion-blue);
-}
-
-.footer-col .social-media a{
-    display:inline-block;
-    height: 50px;
-    width: 50px;
-    background-color: rgba(173, 244, 255, 0.3);
-    margin-right:10px;
+    font-size: 5rem;
     text-align: center;
-    line-height: 55px;
-    border-radius: 50%;
-    color:#ffffff;
-    transition: all 0.5s ease;
-}
-
-.footer-col .social-media a:hover{
-    color:#0f265e;
-    background-color: #ffffff;
-}
-
-.footer-col .social-media a .fab {
-    background-color: transparent;
-    font-size:22px;
-}
-
-/* company establish */
-.copyright{
-    margin-top: 4rem;
-    text-align: center;
-    font-size: 14px;
-    letter-spacing: 5px;
-}
-
-.copyright .material-symbols-outlined{
-    font-size:18px;
-    font-weight: 200;
-}
-
-.credit-cards{
-    margin-top:0.5rem;
-    text-align: center;
-}
-
-.payment-options{
-    height:32px;
-    margin: 7px;
-}
-
-.animated-element{
-    margin-top: 10rem;
-    background: #fff;
-    width:25%;
-    height: 4rem;
+    color:rgb(198, 158, 205);
+    font-family: "Trade Winds";
 }

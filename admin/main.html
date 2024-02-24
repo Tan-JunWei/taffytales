@@ -27,6 +27,7 @@
     <div w3-include-html="nav.html"></div>
     <script src="../functionality/nav.js"></script>
     
+    <!--gallery scroll effect-->
     <h1 class="hide-on-scroll">Taffy Tales</h1>
 
     <section>
@@ -110,6 +111,19 @@
       <a href="../admin/confectionery.html" class="btn"><span>Browse More!</span></a>
     </div>
 
+    <!--text animation-->
+    <div class="customers-words">
+      <h1 id="customers-words-title">Hear from our customers</h1>
+      <h1 id="customers-words-content">Taffy Tales<span class="material-symbols-outlined">copyright</span> is:</h1>
+    </div>
+    <div class="text-animation">
+      <div class="text-animation-line text-animation-line1">"Simply Irresistible"</div>
+      <div class="text-animation-line text-animation-line3">"Uniquely Delicious"</div>
+    </div>
+    <div class="text-animation2">
+      <div class="text-animation-line text-animation-line2">"A Flavour Fantasy"</div>
+    </div>
+
     <!--footer-->
     <div w3-include-html="footer.html"></div>
     
@@ -123,20 +137,6 @@
   
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script> <!--gsap-->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/gh/studo-freight/lenis@1/bundled/lenis.min.js"></script>
-  
-  <script>
-    //smooth scroll (lenis)
-    const lenis = new lenis ({
-      duration: 1.2,
-      easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t))
-    })
-
-    function raf(time){
-      lenis.raf(time)
-      requestAnimationFrame(raf)
-    }
-  </script>
   
   <!--gsap script-->
   <script src="../functionality/gsap.js"></script>
