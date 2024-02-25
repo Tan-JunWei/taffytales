@@ -64,7 +64,6 @@ function updateProductsInCart(product){
     }
   }
   productsInCart.push(product);
-  console.log("test"); 
 }
 
 products.forEach(item => {
@@ -141,4 +140,60 @@ function hideShowPaymentContainer(){
   if (paymentContainer.style.display="block"){
     paymentContainer.style.display="none";
   }
+}
+
+
+// reveal description of item
+const descriptionParent = document.querySelector(".product-description-container");
+
+products.forEach(item => {
+  item.addEventListener("click", (event)=>{
+    if (event.target.classList.contains("btn-desc")){
+      const productID = event.target.dataset.productId;
+      const productName = item.querySelector(".product-name").innerHTML;
+      const productPrice = item.querySelector(".priceValue").innerHTML;
+      const productImage = item.querySelector("img").src;
+      const productDescription = item.querySelector(".product-desc").innerHTML;
+
+      let productForDescription ={
+        name: productName,
+        image: productImage,
+        id: productID,
+        count: 1,
+        price: +productPrice ,
+        basePrice: +productPrice,
+        description: productDescription
+      }
+      updateDescriptionHTML(productForDescription);
+    }
+  })
+})
+
+const updateDescriptionHTML = function(product){
+  let descriptionModel = 
+  ` <div class="product-description">
+      <div class="product-description-image">
+          <img src="${product.image}">
+      </div>
+      <div class="product-description-summary">
+          <div class="summary">
+            <h3>${product.description}</h3>
+          </div>
+          <div class="product-rating">
+              <span><i class="fa-solid fa-star"></i></span>
+              <span><i class="fa-solid fa-star"></i></span>
+              <span><i class="fa-solid fa-star"></i></span>
+              <span><i class="fa-solid fa-star"></i></span>
+              <span><i class="fa-regular fa-star"></i></span>
+          </div>
+          <button onclick="hideDescription()" class="product-description-atc"><span class="material-symbols-outlined">keyboard_return</span></button>
+      </div>
+    </div>
+  `
+  descriptionParent.innerHTML = descriptionModel;
+}
+
+function hideDescription() { //not working
+  const productDescription = document.querySelector(".product-description");
+  productDescription.classList.add("hidden-description");
 }
