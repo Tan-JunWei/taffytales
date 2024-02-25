@@ -27,25 +27,42 @@ body{
 }
 
 .stage {	
-	height: 325px;
+	height: 270px;
 	position: relative;
-    margin-left:28rem;
+    margin-left:32rem;
+    width:660px;
+    cursor:grab;
 }
 
 .box {
-	border: 5px solid #000;
+	border: 5px solid #340054;
 	border-radius: 10px;
 	position: absolute;
 	width: 185px;
 	height: 185px;	
 	display: inline-block;
-	margin: 10px 20px 20px 235px;
-	overflow: hidden;		
+	margin: 25px 20px 20px 235px;
+	overflow: hidden;
 }
 
 .box > img {
 	width: 185px;
 	height: auto;
+}
+
+.general-info{
+    color:white;
+    text-align: center;
+    text-transform: capitalize;
+    background-color: rgb(0, 2, 98);
+    font-family: serif;
+    line-height: 1.5;
+    text-shadow: 1px 1px #e6dede;
+    letter-spacing: 8px;
+}
+
+.general-info > h2{
+    font-size: 1.7rem;
 }
 
 /* utility stylings */
