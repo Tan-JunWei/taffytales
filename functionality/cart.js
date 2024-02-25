@@ -154,6 +154,7 @@ products.forEach(item => {
       const productPrice = item.querySelector(".priceValue").innerHTML;
       const productImage = item.querySelector("img").src;
       const productDescription = item.querySelector(".product-desc").innerHTML;
+      const productStock = item.querySelector(".product-stock").innerHTML;
 
       let productForDescription ={
         name: productName,
@@ -162,7 +163,8 @@ products.forEach(item => {
         count: 1,
         price: +productPrice ,
         basePrice: +productPrice,
-        description: productDescription
+        description: productDescription,
+        stock: +productStock
       }
       updateDescriptionHTML(productForDescription);
     }
@@ -176,24 +178,26 @@ const updateDescriptionHTML = function(product){
           <img src="${product.image}">
       </div>
       <div class="product-description-summary">
+          <div class="product-description-name">
+            <h4>${product.name}</h4>
+          </div>
           <div class="summary">
             <h3>${product.description}</h3>
           </div>
-          <div class="product-rating">
-              <span><i class="fa-solid fa-star"></i></span>
-              <span><i class="fa-solid fa-star"></i></span>
-              <span><i class="fa-solid fa-star"></i></span>
-              <span><i class="fa-solid fa-star"></i></span>
-              <span><i class="fa-regular fa-star"></i></span>
+          <div class="description-price">
+            <h2>$${product.basePrice.toFixed(2)}</h2>
           </div>
-          <button onclick="hideDescription()" class="product-description-atc"><span class="material-symbols-outlined">keyboard_return</span></button>
+          <div class="description-stock">
+            <h2>Available units: ${product.stock}</h2>
+          </div>
+          <button onclick="hideDescription()" class="product-description-back"><span class="material-symbols-outlined">keyboard_return</span></button>
       </div>
     </div>
   `
   descriptionParent.innerHTML = descriptionModel;
-}
+};
 
-function hideDescription() { //not working
+function hideDescription() {
   const productDescription = document.querySelector(".product-description");
   productDescription.classList.add("hidden-description");
 }

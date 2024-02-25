@@ -306,14 +306,14 @@ body{
 }
 
 /* product description */
-.product-desc{
+.product-desc, .product-stock{
     visibility: hidden;
     position: absolute;
 }
 
 .product-description{
     width:60rem;
-    height:50rem;
+    height:40rem;
     position:absolute;
     background:rgb(222, 222, 255);
     display:flex;
@@ -324,14 +324,32 @@ body{
     border: 5px rgb(148, 148, 205) solid;
 }
 
+.product-description .product-description-image{
+    &::before{
+        content:'';
+        height:100%;
+        width:5px;
+        background-color: #26678a;
+        left:28rem;
+        position:absolute;
+    }
+}
+
 .product-description .product-description-image > img{
-    width:30rem;
-    height:auto;
-    margin:30px;
+    width: 28rem; 
+    height: 100%;
+    object-fit: cover; 
 }
 
 .product-description .product-description-summary{
     padding:30px;
+}
+
+.product-description .product-description-summary .product-description-name{
+    font-size:33px;
+    line-height:1.6;
+    margin-bottom:2rem;
+    font-family: 'Courier New', Courier, monospace;
 }
 
 .product-description .product-description-summary .summary h3{
@@ -339,23 +357,37 @@ body{
     line-height: 1.3;
 }
 
-.product-description .product-description-summary .product-rating{
-    color:var(--hollow-purple);
-    padding:30px 0px;
+.product-description .product-description-summary .description-price{
+    margin-top:5rem;
+    font-size: 20px;
+    font-weight:700;
+    font-family: "Roboto";
+    text-align: right;
 }
 
-.product-description .product-description-summary .product-description-atc span{
+.product-description .product-description-summary .description-stock{
+    position:absolute;
+    top:36rem;
+}
+
+.product-description .product-description-summary .description-stock h2{
+    font-size: 18px;
+}
+
+.product-description .product-description-summary .product-description-back span{
     font-size: 56px;
     position:absolute;
     border:none;
-    top:45rem;
+    top:35rem;
     left:54rem;
     transition: all ease 0.6s;
     cursor:pointer;
+    color:#410a6e;
 }
 
-.product-description .product-description-summary .product-description-atc span:hover{
-    transform: rotate(360deg);
+.product-description .product-description-summary .product-description-back span:hover{
+    transform: translateX(-20px) scale(1.1);
+    color:#0d888a;
 }
 
 .hidden-description {
