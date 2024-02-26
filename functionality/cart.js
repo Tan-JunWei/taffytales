@@ -59,6 +59,9 @@ function updateProductsInCart(product){
   for(let i = 0; i < productsInCart.length; i++){
     if(productsInCart[i].id == product.id){
       productsInCart[i].count +=1;
+      if(productsInCart[i].count > productsInCart[i].baseStock){
+        productsInCart[i].count = productsInCart[i].baseStock;
+      }
       productsInCart[i].price = productsInCart[i].basePrice * productsInCart[i].count;
       return;
     }
@@ -73,6 +76,7 @@ products.forEach(item => {
       const productName = item.querySelector(".product-name").innerHTML;
       const productPrice = item.querySelector(".priceValue").innerHTML;
       const productImage = item.querySelector("img").src;
+      const productStock = item.querySelector(".product-stock").innerHTML;
 
       let productToCart ={
         name: productName,
@@ -80,7 +84,8 @@ products.forEach(item => {
         id: productID,
         count: 1,
         price: +productPrice ,
-        basePrice: +productPrice
+        basePrice: +productPrice,
+        baseStock: +productStock
       }
       updateProductsInCart(productToCart);
       updateShoppingCartHTML();
@@ -110,6 +115,10 @@ parentElement.addEventListener("click", (event)=> {
       if(productsInCart[i].id === event.target.dataset.id){
         if(isPlusButton){
           productsInCart[i].count += 1;
+          if (productsInCart[i].count > productsInCart[i].baseStock) {
+            // Prevent adding more items than available stock
+            productsInCart[i].count = productsInCart[i].baseStock;
+          }
         }
         else if (isMinusButton){
           productsInCart[i].count -= 1;
@@ -164,7 +173,7 @@ products.forEach(item => {
         price: +productPrice ,
         basePrice: +productPrice,
         description: productDescription,
-        stock: +productStock
+        baseStock: +productStock
       }
       updateDescriptionHTML(productForDescription);
     }
@@ -188,7 +197,7 @@ const updateDescriptionHTML = function(product){
             <h2>$${product.basePrice.toFixed(2)}</h2>
           </div>
           <div class="description-stock">
-            <h2>Available units: ${product.stock}</h2>
+            <h2>Available unit(s): ${product.baseStock}</h2>
           </div>
           <button onclick="hideDescription()" class="product-description-back"><span class="material-symbols-outlined">keyboard_return</span></button>
       </div>

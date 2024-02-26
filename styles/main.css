@@ -409,3 +409,52 @@ h2 .material-symbols-outlined{
     color:rgb(198, 158, 205);
     font-family: "Trade Winds";
 }
+
+.about, .bottom-about{
+    width:100%;
+    height: 80vh;
+    position: relative;
+    display: flex;
+    flex-direction: row;
+}
+
+.about-left, .bottom-about-right{
+    width:55%;
+    height:50vh;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.about-left h3, .bottom-about-right h3{
+    font-size: 47px;
+    color:white;
+    letter-spacing: 5px;
+    line-height: 1.6;
+    -webkit-text-stroke: 2px rgb(220, 253, 255);
+}
+
+.about-left h3{
+    text-align: right;
+}
+
+.bottom-about-right h3{
+    text-align: left;
+}
+
+.about-left p, .bottom-about-right p{
+    line-height: 1.6;
+    color:white;
+    font-size: 19px;
+    text-align: center;
+}
+
+.about-right, .bottom-about-left{
+    width:45%;
+    height:50vh;
+}
+
+.about-right img,.bottom-about-left img{
+    width:70%;
+    border-radius:50%;
+}
