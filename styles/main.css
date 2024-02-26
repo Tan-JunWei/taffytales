@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Almendra:ital,wght@0,400;0,700;1,400;1,700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Trade+Winds&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 
 * {
     box-sizing: border-box;
@@ -410,6 +411,20 @@ h2 .material-symbols-outlined{
     font-family: "Trade Winds";
 }
 
+/* about section */
+.about-header{
+    margin-top: 60vh;
+    width:100%;
+    height: 25vh;
+}
+
+.about-header h1{
+    color:rgb(159, 255, 223);
+    text-align: center;
+    font-size: 5rem;
+    font-family: "Sofia";
+}
+
 .about, .bottom-about{
     width:100%;
     height: 80vh;
@@ -431,15 +446,9 @@ h2 .material-symbols-outlined{
     color:white;
     letter-spacing: 5px;
     line-height: 1.6;
+    text-align: center;
     -webkit-text-stroke: 2px rgb(220, 253, 255);
-}
-
-.about-left h3{
-    text-align: right;
-}
-
-.bottom-about-right h3{
-    text-align: left;
+    margin-bottom:30px;
 }
 
 .about-left p, .bottom-about-right p{
@@ -457,4 +466,45 @@ h2 .material-symbols-outlined{
 .about-right img,.bottom-about-left img{
     width:70%;
     border-radius:50%;
+    transition: all ease 0.7s;
+}
+
+.about-right img:hover,.bottom-about-left img:hover{
+    transform: scale(1.15) translateX(50px) rotate(15deg);
+    border-radius: 35%;
+}
+
+.faq{
+    display: flex;
+    flex-direction: column;
+    gap:3rem;
+}
+
+.faq h1{
+    font-size: 4rem;
+    font-family: "Sofia";
+    color:var(--orion-blue);
+}
+
+.faq h1 span{
+    font-size: 4rem;
+    font-weight: 900;
+}
+
+.faq .faq-qn{
+    display: flex;
+    flex-direction: column;
+    width:100%;
+}
+
+.faq-qn h3{
+    color:rgb(255, 252, 235);
+    font-size: 32px;
+    font-weight: 700;
+}
+
+.faq-qn p{
+    color:rgb(152, 178, 215);
+    font-size: 21px;
+    font-family: "Roboto";
 }
