@@ -26,7 +26,13 @@ ScrollTrigger.create({
 });
 
 //3rd text animation
-gsap.fromTo(".text-animation-line3", {x:3000,y:900}, {x: 2400, y:-20, duration: 5, repeat:-1, scale:3, yoyo:true, ease:"expo.out",});
+gsap.to(".text-animation-line3",{
+  scale:2.3,
+  duration: 5,
+  repeat: -1,
+  yoyo: true,
+  ease: "power1.inOut"
+});
 
 //2nd text animation
 const lineTl = gsap.timeline({
@@ -85,7 +91,7 @@ let scrollTween = gsap.to(sections, {
     trigger: ".faq-container",
     pin: true,
     scrub: 1,
-    end: "+=5000",
+    end: "+=3000", //5000
     //snap: 1 / (sections.length - 1),
     //markers: true,
   }

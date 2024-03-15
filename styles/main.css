@@ -20,7 +20,7 @@ body{
 }
 
 .hide-on-scroll{ 
-    font-size: 14rem; 
+    font-size: 14vw; 
     font-family: 'Lemon';
     position: fixed;
     left: 54%;
@@ -133,7 +133,7 @@ section {
 
 #buyNow{
     margin-top: 50rem;
-    margin-left:45.5%;
+    margin-left:45%;
     padding: 9px 20px;
     background-image: linear-gradient(rgb(245, 63, 50),rgb(254, 157, 83));
     border: none;
@@ -185,9 +185,9 @@ h2 .material-symbols-outlined{
 #best-1-parent{
     overflow: hidden;
     position: relative;
-    margin-left: 10rem;
-    max-height: 46rem;
-    max-width: 35rem;
+    margin-left: 5vw; /* 3 rem */
+    height: 47rem;
+    width:35rem;
     margin-right: 40px;
 }
 
@@ -195,7 +195,6 @@ h2 .material-symbols-outlined{
     width: 35rem;
     height:46rem;
     margin-right: 10px;
-    left: 10rem;
     transition: transform 0.3s ease-in-out;
 }
 
@@ -227,6 +226,7 @@ h2 .material-symbols-outlined{
 
 #bestsellers img{
     max-width: 100%;
+    min-width:25vw;
 }
 
 #bestsellers h3{
@@ -281,7 +281,7 @@ h2 .material-symbols-outlined{
     background: rgb(27,27,27, .75);
     color: var(--pale-pink);
     text-align: center;
-    transition: all ease 0.4s;
+    transition: all ease 0.5s;
 }
 
 .card .intro h3{
@@ -318,11 +318,67 @@ h2 .material-symbols-outlined{
     visibility: visible;
 }
 
+@media screen and (max-width: 600px) {
+    #bestsellers h3{
+        font-size: 13px;
+    }
+    .card:hover .intro{
+        height:250px;
+        bottom: 0rem;
+        background: rgba(31, 9, 9, 0.85);
+    }
+    .card:hover p{
+        font-size: 14px;
+    }
+}
+
+@media screen and (min-width: 600px) and (max-width: 800px) {
+    #bestsellers h3{
+        font-size: 18px;
+    }
+    .card:hover .intro{
+        height:280px;
+        bottom: 0rem;
+        background: rgba(31, 9, 9, 0.85);
+    }
+    .card:hover p{
+        font-size: 16px;
+    }
+}
+
+@media screen and (min-width: 800px) and (max-width: 1000px) {
+    #bestsellers h3{
+        font-size: 19px;
+    }
+    .card:hover .intro{
+        height:270px;
+        bottom: 0rem;
+        background: rgba(31, 9, 9, 0.85);
+    }
+    .card:hover p{
+        font-size: 19px;
+    }
+}
+
+@media screen and (min-width: 1000px) and (max-width: 1200px) {
+    #bestsellers h3{
+        font-size: 22px;
+    }
+    .card:hover .intro{
+        height:250px;
+        bottom: 0rem;
+        background: rgba(31, 9, 9, 0.85);
+    }
+    .card:hover p{
+        font-size: 21px;
+    }
+}
+
 /*call to action 2*/
 
 .cta-container .btn{
     top:40px;
-    margin-left: 43%;
+    margin-left: 42%;
     margin-bottom: 25px;
     padding: 12px 20px;
     min-width: 180px;
@@ -393,19 +449,20 @@ h2 .material-symbols-outlined{
     margin-top:12rem;
     overflow:hidden;
     background:transparent;
-    width:58rem;
-    margin-left:26rem;
+    width:50vw; 
+    margin-left:20vw; 
 }
 
 .text-animation-line3{
+    margin-left: 65vw;
     margin-top:16rem;
     color: rgb(218, 251, 253);
-    font-size: 2rem;
+    font-size: 3vh; /* 2 rem */
 }
 
 .text-animation-line2{
     text-transform: capitalize;
-    font-size: 5rem;
+    font-size: 7.2vh;
     text-align: center;
     color:rgb(198, 158, 205);
     font-family: "Trade Winds";
@@ -465,13 +522,34 @@ h2 .material-symbols-outlined{
 
 .about-right img,.bottom-about-left img{
     width:70%;
+    min-width: 180px;
     border-radius:50%;
     transition: all ease 0.7s;
+    margin-top:20px;
 }
 
 .about-right img:hover,.bottom-about-left img:hover{
     transform: scale(1.15) translateX(50px) rotate(15deg);
     border-radius: 35%;
+}
+
+@media screen and (max-width: 650px) {
+    .about-right{
+        background: none;
+    }
+    .about-left h3, .bottom-about-right h3{
+        font-size:35px;
+    }
+    .about-left p, .bottom-about-right p{
+        font-size:16px;
+    }
+    .about-right img:hover, .bottom-about-left img:hover{
+        transform: scale(1.05) translateX(30px) rotate(15deg);
+        border-radius: 35%;
+    }
+    .about-right img,.bottom-about-left img{
+        margin-top: 50px;
+    }
 }
 
 /*faq section */
@@ -576,4 +654,20 @@ section {
 
 .contact-info h4{
     font-size: 1.2rem;
+}
+
+@media screen and (max-width: 1100px){
+    .faq h1{
+        font-size: 2.7rem;
+    }
+    .pin{
+        margin-top:20vh;
+    }
+    .faq-container .col p{
+        font-size: 1rem;
+        width:35vw;
+    }
+    .faq-container .pin{
+        background: none;
+    }
 }
