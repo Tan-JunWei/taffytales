@@ -204,6 +204,9 @@ const updateDescriptionHTML = function(product){
     </div>
   `
   descriptionParent.innerHTML = descriptionModel;
+  
+  const descriptionPopUp = document.querySelector(".product-description")
+  descriptionPopUp.scrollIntoView({ behavior: "smooth", block: "start" });
 };
 
 function hideDescription() {
