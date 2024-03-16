@@ -344,7 +344,7 @@ body{
 
 .product-description .product-description-image > img{
     width: 25vw; 
-    height:100%;
+    margin-top:20vh;
     object-fit: cover; 
 }
 
@@ -679,7 +679,7 @@ body{
 /*payment container (div) */
 .payment-container{
     position: absolute;
-    top:25%;
+    top:55vh;
     z-index: 10;
     text-transform: capitalize;
     transition: all .2s linear;
@@ -687,11 +687,12 @@ body{
     justify-content: center;
     align-items: center;
     padding:25px; 
-    min-height: 100vh;
+    height: 100vh;
     width:100%;
     background: linear-gradient(90deg, #2ecc71, #6d9cdd 60%);
     padding-bottom: 70px;
     display:none;
+    border: 15px solid rgb(74, 0, 77);
 }
 
 .payment-container .closePaymentContainer{
@@ -714,7 +715,7 @@ body{
 }
 
 .payment-container form{
-    transform: translate(42%, 22%);
+    transform: translate(20vw, 16vh);
     padding:20px;
     width:900px;
     background:white;
@@ -815,36 +816,49 @@ div::-webkit-scrollbar-thumb:hover{
     background: linear-gradient(rgb(255, 240, 242),rgb(183, 144, 255));
 }
 
-/* media queries */
-/* @media screen and (max-width:700px){
-    .product-description{
-        width:25rem;
-        height:75rem;
-        top:calc(115vh +100px);
-        left:12vw;
+@media screen and (max-width:600px){
+    .payment-container form .payment-row{
         display:flex;
         flex-direction: column;
-        z-index:20;
     }
+    .payment-container{
+        height:140vh;
+    }
+    .payment-container form{
+        width:400px;
+        transform: translate(1vw, 16vh);
+    }
+}
 
-    .product-description .product-description-image > img{
-        width: 23rem;
-        object-fit: cover; 
+@media screen and (min-width:600px){
+    .payment-container form .payment-row{
+        display:flex;
+        flex-direction: column;
     }
+    .payment-container{
+        height:140vh;
+    }
+    .payment-container form{
+        width:520px;
+        transform: translate(2vw, 16vh);
+    }
+}
 
-    .product-description .product-description-summary .product-description-name{
-        line-height:1.2;
-    }
-    
-    .product-description .product-description-summary .summary h3{
-        line-height: 1.3;
-    }
-}*/
-
-@media screen and (min-width:700px){
+@media screen and (min-width:850px) and (max-width:1200px){
     .product-items{
         display:grid;
         grid-template-columns: repeat(2, 1fr);
+    }
+    .payment-container form .payment-row{
+        display:flex;
+        flex-direction: column;
+    }
+    .payment-container{
+        height:140vh;
+    }
+    .payment-container form{
+        min-width:740px;
+        transform: translate(2vw, 16vh);
     }
 }
 
@@ -860,11 +874,33 @@ div::-webkit-scrollbar-thumb:hover{
     .products.text-light{
         width:50%;
     }
+    .payment-container form .payment-row{
+        display:flex;
+        flex-direction: row;
+    }
+    .payment-container{
+        height:100vh;
+    }
+    .payment-container form{
+        min-width:1000px;
+        transform: translate(11vw, 16vh);
+    }
 }
 
-@media screen and (min-width:1336px){
+@media screen and (min-width:1600px){
     .product-items{
         display:grid;
         grid-template-columns: repeat(4, 1fr);
+    }
+    .payment-container form .payment-row{
+        display:flex;
+        flex-direction: row;
+    }
+    .payment-container{
+        height:100vh;
+    }
+    .payment-container form{
+        min-width:1200px;
+        transform: translate(14vw, 16vh);
     }
 }

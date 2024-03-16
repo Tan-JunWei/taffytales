@@ -142,6 +142,7 @@ function paymentContainerReveal(){
     paymentContainer.style.display="inline-block";
     hideShowCart();
   }
+  paymentContainer.scrollIntoView({ behavior: "smooth", block: "start" });
 }
 
 //opposite of earlier function
