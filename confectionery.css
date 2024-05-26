@@ -21,7 +21,7 @@ body{
 /* 3d image animation */
 .wrapper {
 	margin: auto;
-    background-image: url("../assets/candyBanner.jpg");
+    background-image: url("candyBanner.jpg");
     background-position: center;
     background-size: cover;
     display:grid;
@@ -344,7 +344,7 @@ body{
 
 .product-description .product-description-image > img{
     width: 25vw; 
-    margin-top:20vh;
+    margin-top:17vh;
     object-fit: cover; 
 }
 
@@ -393,7 +393,7 @@ body{
 }
 
 .product-description .product-description-summary .product-description-back span:hover{
-    transform: translateX(-2vw) scale(1.1);
+    transform: translateX(-0.1vw) scale(1.05);
     color:#0d888a;
 }
 
@@ -548,7 +548,7 @@ body{
 
 .cart{
     height:70%;
-    min-width: 300px;
+    min-width: 500px;
     position:absolute;
     top:20%;
     left:120%;
@@ -599,6 +599,10 @@ body{
 
 .buyItem-quantity, .buyItem-item{
     text-align: center;
+}
+
+.buyItem-item h5{
+    padding-left:5px;
 }
 
 .buyItem-price h6{
@@ -689,10 +693,21 @@ body{
     padding:25px; 
     height: 100vh;
     width:100%;
-    background: linear-gradient(90deg, #2ecc71, #6d9cdd 60%);
     padding-bottom: 70px;
     display:none;
     border: 15px solid rgb(74, 0, 77);
+}
+
+.payment-container::before{
+    content: '';
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: linear-gradient(90deg, #2ecc71, #6d9cdd 60%);
+    opacity: 0.8;
+    position:absolute;
+
 }
 
 .payment-container .closePaymentContainer{
@@ -711,7 +726,7 @@ body{
 
 .payment-container .closePaymentContainer:hover{
     cursor: pointer;
-    transform: rotate(270deg);
+    transform: rotate(360deg);
 }
 
 .payment-container form{
@@ -757,6 +772,7 @@ body{
     border:1px solid rgb(222, 221, 221);
     padding:10px 15px;
     font-size:15px;
+    opacity:0.6;
     text-transform: none;
 }
 
@@ -900,7 +916,7 @@ div::-webkit-scrollbar-thumb:hover{
         height:100vh;
     }
     .payment-container form{
-        min-width:1200px;
-        transform: translate(14vw, 16vh);
+        min-width:1350px;
+        transform: translate(13vw, 16vh);
     }
 }

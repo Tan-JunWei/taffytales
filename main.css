@@ -51,15 +51,15 @@ section {
     background-size: cover;
     z-index:1;
 
-    &:nth-of-type(1) {background-image: url('../assets/candy-1.jpg');}
-    &:nth-of-type(2) {background-image: url('../assets/candy-2.jpg');}
-    &:nth-of-type(3) {background-image: url('../assets/candy-3.jpg');}
-    &:nth-of-type(4) {background-image: url('../assets/candy-4.jpg');}
-    &:nth-of-type(5) {background-image: url('../assets/candy-5.jpg');}
-    &:nth-of-type(6) {background-image: url('../assets/candy-6.jpg');}
-    &:nth-of-type(7) {background-image: url('../assets/candy-7.jpg');}
-    &:nth-of-type(8) {background-image: url('../assets/candy-8.jpg');}
-    &:nth-of-type(9) {background-image: url('../assets/candy-9.jpg');}
+    &:nth-of-type(1) {background-image: url('candy-1.jpg');}
+    &:nth-of-type(2) {background-image: url('candy-2.jpg');}
+    &:nth-of-type(3) {background-image: url('candy-3.jpg');}
+    &:nth-of-type(4) {background-image: url('candy-4.jpg');}
+    &:nth-of-type(5) {background-image: url('candy-5.jpg');}
+    &:nth-of-type(6) {background-image: url('candy-6.jpg');}
+    &:nth-of-type(7) {background-image: url('candy-7.jpg');}
+    &:nth-of-type(8) {background-image: url('candy-8.jpg');}
+    &:nth-of-type(9) {background-image: url('candy-9.jpg');}
 
 
     &::before {

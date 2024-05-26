@@ -51,7 +51,7 @@ const updateShoppingCartHTML = function(){
   }
   else{
     parentElement.innerHTML = '<h4 class="empty">Your shopping cart is empty</h4>'
-    cartSumPrice.innerHTML = ""; 
+    cartSumPrice.innerHTML = "Subtotal (" + countTheTotalQuantity() + " items): $" + countTheSumPrice();
   }
 }
 
